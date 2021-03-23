@@ -4,7 +4,7 @@
 
 ## Descripción del juego
 
-*Juego sin Nombre* trata la historia de un chico que despierta en un oscuro mundo que no reconoce. Este chico deberá averigua dónde está y qué ocurre, tomando responsabilidad de sus propios actos. 
+*Juego sin Nombre* trata la historia de un chico que despierta en un oscuro mundo que no reconoce. La misión del chico será averiguar dónde está y qué ocurre, tomando responsabilidad de sus propios actos. 
 
 El juego contendrá elementos humorísticos y decisiones de peso en la historia.
 
