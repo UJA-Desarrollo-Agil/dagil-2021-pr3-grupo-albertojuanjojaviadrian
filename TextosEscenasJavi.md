@@ -17,3 +17,11 @@ Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escon
 -Puedes mirar en detalle, eso para iteración 2-
 
 Delante de ti tienes una única puerta que parece dar al interior del cuartel general. Puedes cruzarla.
+
+
+
+## Escena 2
+
+Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. -Puedes mirar en detalle los cuadros-. Parece que los Tenedores no escatiman en adornos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil... la decoración es impresionante.
+
+A tu izquierda (por aquí se puede entrar a sala donde consigues llave) hay una puerta con un rótulo que dice "Almacén". A tu derecha hay otra puerta que parece llevar a la sala principal del cuartel general (por aquí se puede entrar a la sala principal, pero sólo si has cogido la tarjeta electrónica en el almacén primero).
