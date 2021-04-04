@@ -22,6 +22,18 @@ Delante de ti tienes una única puerta que parece dar al interior del cuartel ge
 
 ## Escena 2
 
-Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. -Puedes mirar en detalle los cuadros-. Parece que los Tenedores no escatiman en adornos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil... la decoración es impresionante.
+Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. -Puedes mirar en detalle los cuadros-. Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil... la decoración es impresionante.
 
 A tu izquierda (por aquí se puede entrar a sala donde consigues llave) hay una puerta con un rótulo que dice "Almacén". A tu derecha hay otra puerta que parece llevar a la sala principal del cuartel general (por aquí se puede entrar a la sala principal, pero sólo si has cogido la tarjeta electrónica en el almacén primero).
+
+
+
+###### Escena 2. Si no tienes llave e interactúas con puerta.
+
+Te acercas a la puerta que lleva a la sala principal y esperas a que se abra, ya que es automática. Tras unos segundos, nada ocurre. Empiezas a pensar que no tienes alma y por eso la puerta no te detecta. Luego se te ocurre una teoría más plausible; quizás debas buscar una llave electrónica para poder pasar.
+
+
+
+
+
+## Escena 3
