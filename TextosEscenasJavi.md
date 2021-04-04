@@ -4,7 +4,7 @@ Estos textos se escriben aparte y luego se añaden a las escenas cuando estén i
 
 
 
-## Escena 1 
+## Escena 1 - Inicio
 
 *Año 2188. La humanidad ha alcanzado un conocimiento casi completo del universo y niveles tecnológicos inimaginables. Sin embargo, una última gran guerra ha paralizado al mundo entero durante 50 años: la guerra del arroz.*
 
@@ -20,20 +20,22 @@ Delante de ti tienes una única puerta que parece dar al interior del cuartel ge
 
 
 
-## Escena 2
+## Escena 2 - Sala de los cuadros
 
 Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. -Puedes mirar en detalle los cuadros-. Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil... la decoración es impresionante.
 
-A tu izquierda (por aquí se puede entrar a sala donde consigues llave) hay una puerta con un rótulo que dice "Almacén". A tu derecha hay otra puerta que parece llevar a la sala principal del cuartel general (por aquí se puede entrar a la sala principal, pero sólo si has cogido la tarjeta electrónica en el almacén primero).
+A tu izquierda (por aquí se puede entrar a sala donde consigues llave) hay una puerta con un rótulo que dice "Almacén". A tu derecha hay otra puerta que parece llevar a la sala principal del cuartel general (lleva a pasillo antesala).
 
 
 
-###### Escena 2. Si no tienes llave e interactúas con puerta.
+## Escena 4 - Pasillo antesala a la principal
+
+Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción, pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, observando con curiosidad las paredes de este. (aquí meteremos un mirar con detalle y habrá unos agujeros por los que observar algo gracioso).
+
+Llegas a la puerta de salida y estás seguro de que esta puerta sí lleva a la sala principal. Intentas cruzarla (aquí acción). (por aquí se puede entrar a la sala principal, pero sólo si has cogido la tarjeta electrónica en el almacén primero).
+
+
+
+###### Escena 4. Si no tienes llave e interactúas con puerta.
 
 Te acercas a la puerta que lleva a la sala principal y esperas a que se abra, ya que es automática. Tras unos segundos, nada ocurre. Empiezas a pensar que no tienes alma y por eso la puerta no te detecta. Luego se te ocurre una teoría más plausible; quizás debas buscar una llave electrónica para poder pasar.
-
-
-
-
-
-## Escena 3
