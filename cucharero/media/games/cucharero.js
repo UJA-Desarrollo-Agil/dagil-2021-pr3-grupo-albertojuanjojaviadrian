@@ -63,7 +63,7 @@ undum.game.situations = {
     lema, una fotografía de un gran tenedor ondeando la bandera. No entiendes cómo podrán comer con un tenedor tan grande.</p>\
     \
     <p class='transient'>Terminas de observar los posters y al agachar un poco la cabeza te encuentras con un muñeco de un sargento tenedor de escala \
-    real sentado en el suelo, ¡con su uniforme y todo! Puedes <a href='Escena2'>volver a la sala anterior</a></p>",
+    real sentado en el suelo, ¡con su uniforme y todo! Puedes <a href='Escena2'>volver a la sala anterior</a>.</p>",
     {
       actions: {
         lata: function enter(character, system, action) {
@@ -100,7 +100,7 @@ undum.game.situations = {
     sujeta por dos finos clavos que dice <a href='Escena7'><i>\"WC\"</i></a>, tu intelecto como estratega te sugiere que es el cuarto de baño.</p>\
     \
     <p class='transient'>A juzgar por el aspecto de esos clavos que sujetan el tablón de madera presientes que pueden caerse de un momento a otro, \
-    por lo que puedes <a href='./esperar'>esperar</a></p>",
+    por lo que puedes <a href='./esperar'>esperar</a>.</p>",
     {
       actions: {
         esperar: function enter(character, system, action) {},
@@ -109,7 +109,16 @@ undum.game.situations = {
   ),
 
   Escena6: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+    "<p class='transient'>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
+    Los tenedores a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
+    Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.</p>\
+    \
+    <p class='transient'>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo.</p>\
+    \
+    <p class='transient'>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color rojo escarlata, \
+    el segundo libro es verde esmeralda y el último es azul cobalto.</p>\
+    \
+    <p class='transient'>También puedes volver a <a href='Escena 5'>sala principal</a>.</p>",
     {
       actions: {
         ejemplo6: function enter(character, system, action) {},
