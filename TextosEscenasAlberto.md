@@ -29,3 +29,15 @@ Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofe
 Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo. 
 
 Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color rojo escarlata, el segundo libro es verde esmeralda y el último es azul cobalto.
+
+## Escena 7
+
+Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche y no volvió nunca... Esperas que no se haya perdido, el camino hacia la tienda es algo rebuscado.
+
+Hay un lavabo con un espejo, al verte reflejado, te llena de orgullo saber que estas apunto de acabar con esta interminable guerra. También hay 3 de cepillos de dientes de diferentes colores sin usar, te planteas si los tenedores se limpiaran entre las puntas, debe de ser muy anti-higiénico.
+
+###### Si revisas los cepillos de dientes, te das cuenta de que están pegados y observas el patrón de colores que siguen los cepillos (combinación).
+
+También hay tres vateres, aunque te extraña que solo uno de ellos esté cubierto para proteger la intimidad.
+
+###### Puedes revisar el baño que esta recubierto y si no has desbloqueado la combinación, será un vater normal y corriente, en caso contrario aparece la entrada a la sala secreta.
