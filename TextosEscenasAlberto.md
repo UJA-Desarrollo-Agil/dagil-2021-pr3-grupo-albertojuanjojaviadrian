@@ -21,3 +21,11 @@ Frente de ti se situan 3 puertas de diferentes tamaños. La mas grande posee un 
 A juzgar por el aspecto de esos clavos que sujetan el tablón de madera presientes que pueden caerse de un momento a otro, por lo que puedes *esperar*. *(Si, otra vez, puedes esperar infinitamente a que esos clavos se caigan)*
 
 ###### Si intentas entrar a la sala del generalísimo sin traje te indicará que deberás obtener primero un traje para poder infiltrarte.
+
+## Escena 6
+
+Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. Los tenedores a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. Esperas encontrar *"El Cucharoncito"*, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.
+
+Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo. 
+
+Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color rojo escarlata, el segundo libro es verde esmeralda y el último es azul cobalto.
