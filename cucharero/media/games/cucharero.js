@@ -127,8 +127,17 @@ undum.game.situations = {
   ),
 
   Escena7: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena5'>Mover a escena 5</a></p>\
-        <p class='transient'><a href='Escena8'>Mover a escena 8</a></p>",
+    "Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
+    puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche y no volvió nunca... Esperas que no se haya perdido, \
+    el camino hacia la tienda es algo rebuscado.\
+    \
+    Hay un lavabo con un espejo, al verte reflejado, te llena de orgullo saber que estas apunto de acabar con esta interminable guerra. \
+    También hay 3 de cepillos de dientes de diferentes colores sin usar, te planteas si los tenedores se limpiaran entre las puntas, \
+    debe de ser muy anti-higiénico.\
+    \
+    También hay tres vateres, aunque te extraña que solo uno de ellos esté <a href='Escena8'>cubierto</a> para proteger la intimidad.\
+    \
+    <p class='transient'>También puedes volver a <a href='Escena 5'>sala principal</a>.</p>",
     {
       actions: {
         ejemplo1: function enter(character, system, action) {},
