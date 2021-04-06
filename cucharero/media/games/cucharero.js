@@ -49,6 +49,8 @@ undum.game.situations = {
     ),
 
     Escena2: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena3'>Mover a escena 3</a></p>\
+        <p class='transient'><a href='Escena5'>Mover a escena 5</a></p>",
         {
             actions: {
                 ejemplo2: function enter(character, system, action){
@@ -72,6 +74,7 @@ undum.game.situations = {
     ),
 
     Escena4: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
         {
             actions: {
                 ejemplo4: function enter(character, system, action){
@@ -97,6 +100,7 @@ undum.game.situations = {
     ),
 
     Escena6: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
         {
             actions: {
                 ejemplo6: function enter(character, system, action){
@@ -121,6 +125,7 @@ undum.game.situations = {
     ),
 
     Escena8: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 7'>Mover a escena 7</a></p>",
         {
             actions: {
                 ejemplo8: function enter(character, system, action){
