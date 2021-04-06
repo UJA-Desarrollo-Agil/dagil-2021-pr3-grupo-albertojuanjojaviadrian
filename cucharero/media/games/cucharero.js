@@ -48,11 +48,36 @@ undum.game.situations = {
                 
     ),
 
+    Escena2: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena3'>Mover a escena 3</a></p>\
+        <p class='transient'><a href='Escena5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo2: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
     Escena3: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
         {
             actions: {
                 ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena4: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo4: function enter(character, system, action){
                    
                 },
             }
@@ -74,6 +99,18 @@ undum.game.situations = {
                 
     ),
 
+    Escena6: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo6: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
     Escena7: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena5'>Mover a escena 5</a></p>\
         <p class='transient'><a href='Escena8'>Mover a escena 8</a></p>",
@@ -87,8 +124,31 @@ undum.game.situations = {
                 
     ),
 
+    Escena8: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 7'>Mover a escena 7</a></p>",
+        {
+            actions: {
+                ejemplo8: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
     Escena9: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena10'>Mover a escena 10</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena10: new undum.SimpleSituation(
         {
             actions: {
                 ejemplo1: function enter(character, system, action){
