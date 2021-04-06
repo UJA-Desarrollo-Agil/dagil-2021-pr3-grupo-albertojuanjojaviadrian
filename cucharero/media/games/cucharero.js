@@ -68,6 +68,17 @@ undum.game.situations = {
                 
     ),
 
+    Escena4: new undum.SimpleSituation(
+        {
+            actions: {
+                ejemplo4: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
     Escena5: new undum.SimpleSituation(
         {
             actions: {
