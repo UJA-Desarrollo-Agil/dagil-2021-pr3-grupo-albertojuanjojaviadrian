@@ -88,17 +88,19 @@ undum.game.situations = {
 
   Escena5: new undum.SimpleSituation(
     "<p class='transient'>Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
-    Piensas que es la adrenalina que tienes al introducirte en la sala principal de los Tenedores, como cuando mueves una tarjeta en Trello. \
-    Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
-    Hechos en mármol de Carraca. Tus conocimientos viendo documentales del canal Historia te hacen cuestionar que tan caros podrían ser esos pedestales... \
-    Frente de ti se situan 3 puertas de diferentes tamaños. La mas grande posee un gran rótulo que pone <i>\"Tridente Dorado, generalísimo de los ejércitos tenedores\"</i>, \
-    por lo que puedes suponer que es la sala donde se encuentran los mayores exponentes Tenedores. \
-    La siguiente puerta posee un rótulo esta vez menos llamativo que dice <i>\"Biblioteca\"</i>, por el nombre supones que es una biblioteca. \
-    Por último la puerta mas pequeñita posee un rótulo escrito sobre una tabla de madera sujeta por dos finos clavos que dice <i>\"WC\"</i>, \
-    tu intelecto como estratega te sugiere que es el cuarto de baño. A juzgar por el aspecto de esos clavos que sujetan el tablón de madera \
-    presientes que pueden caerse de un momento a otro, por lo que puedes <a href='./esperar'>esperar</a><a href='Escena6'>Mover a escena 6</a></p>\
-        <p class='transient'><a href='Escena7'>Mover a escena 7</a></p>\
-        <p class='transient'><a href='Escena9'>Mover a escena 9</a></p>",
+    Piensas que es la adrenalina que tienes al introducirte en la sala principal de los Tenedores, como cuando mueves una tarjeta en Trello.</p>\
+    \
+    <p class='transient'>Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
+    Hechos en mármol de Carraca. Tus conocimientos viendo documentales del canal Historia te hacen cuestionar que tan caros podrían ser esos pedestales.</p>\
+    \
+    <p class='transient'>Frente de ti se situan 3 puertas de diferentes tamaños. La mas grande posee un gran rótulo que pone \
+    <a href='Escena9'><i>\"Tridente Dorado, generalísimo de los ejércitos tenedores\"</i></a>, por lo que puedes suponer que es la sala donde se encuentran \
+    los mayores exponentes Tenedores. La siguiente puerta posee un rótulo esta vez menos llamativo que dice <a href='Escena6'><i>\"Biblioteca\"</i></a>, por \
+    el nombre supones que es una biblioteca. Por último la puerta mas pequeñita posee un rótulo escrito sobre una tabla de madera \
+    sujeta por dos finos clavos que dice <a href='Escena7'><i>\"WC\"</i></a>, tu intelecto como estratega te sugiere que es el cuarto de baño.</p>\
+    \
+    <p class='transient'>A juzgar por el aspecto de esos clavos que sujetan el tablón de madera presientes que pueden caerse de un momento a otro, \
+    por lo que puedes <a href='./esperar'>esperar</a></p>",
     {
       actions: {
         esperar: function enter(character, system, action) {},
