@@ -32,74 +32,133 @@ undum.game.situations = {
 
     //ZONA LINEAL INICIO
     start: new undum.SimpleSituation(
-        "<h1>Los rayos del Sol te acarician suavemente a través de la ventana...</h1>\
-        <p>...mientras tu madre te grita.\n \</p>\
-        </br>\
-        <p><i>\n<<¡LEVÁNTATE Y VE A COMPRAR EL PAN, YA!>></i>\</p>\
-        </br>\
-        <p>Te estirazas, te quitas las legañas de los ojos (aunque algunas sobreviven) y te pones en pie. Te da bastante palo ir a por el pan, pero hoy \n\
-        toca comer habicholillas con tomate y como no soportas su sabor sueles usar el pan para disimularlo. Así que, por tu propio bien, decides ir a comprar\n\
-        con ganas.\</p>\
-        </br>\
-        <p class='transient'>Ahora sólo necesitas <a class='newsituation' href='habitacion'>buscar algo</a> para vestirte</p>"
+       
+        "<p class='transient'><a href='Escena1'>Mover a escena 1</a></p>"
     ),
 
-    habitacion: new undum.SimpleSituation(
-        "<h1>Exploras tu habitación</h1>\
-        <p>Observas con detenimiento tu cuarto, mientras terminas de despertar. Está como siempre: ordenado... pero no demasiado.\</p>\
-        </br>\
-        <p>Entre otras cosas, encuentras unos <a href='./papeles' class='once'>papeles revueltos</a> \n\
-        encima del escritorio, tu <a href='./zapatillas' class='once'>par de zapatillas</a> de casa preferidas al lado de la cama\n\
-        y el <a href='./armario' class='once'>armario</a> a medio abrir.\</p>\
-        </br>",
+    Escena1: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
         {
             actions: {
-                papeles: function enter(character, system, action){
-                    system.write("<p>Entre los papeles ves un documento con tu nombre y tu carrera: Javier Camacho, Ing. Informática UJA. El folio tiene garabateados\n\
-                    unos esquemas que dibujaste para un juego narrativo que nunca vió la luz. En él, el protagonista eras tú.\n\
-                    </p> </br>"
-                    );
-            
-                    system.setCharacterText("<p>Al leer tu nombre algo extraño cruza tu mente: no estás seguro de si esa es tu verdadera identidad, \n\
-                    pero sientes que si no lo fuera algo terrible podría pasar...</p>"
-                    );
+                ejemplo1: function enter(character, system, action){
+                   
                 },
-                
-                zapatillas: function enter(character, system, action){
-                    system.write("<p> Miras fijamente tus zapatillas. Te encantan porque son ridículas. Recuerdas que cuando las compraste \n\
-                    estabas buscando las zapatillas más feas de la tienda. En cuanto las viste, supiste que eran las indicadas.\n\
-                    </br>\
-                    <img src='media/games/zapatillas.jpg' class='float_center'></p>\n\
-                    </br>\
-                    <p>Puedes <a href='./ponerzapatillas' class='once'>ponértelas</a> para hacer el ridículo durante el resto del día.</p> </br>"               
-                    );
-                },
-                
-                ponerzapatillas: function enter(character, system, action){
-                    system.write("<p> Te pones las zapatillas. Te sientes un poco más feliz. Más o menos. </p> </br>");
-            
-                    system.setCharacterText("<p>Las palabras del Profesor Oak resuenan en tu cabeza: ¡Javier, cada cosa en su momento! </p>");
-            
-                    system.setQuality("zapatillas", true); 
-                },
-                
-                armario: function enter(character, system, action){
-                    system.write("<p>No sabes por qué el armario está medio abierto. Quizá un monstruo viva en él, o peor, \n\
-                    quizá tu hermano pequeño ha vuelto a rebuscar entre tus cosas. No lo piensas mucho y miras tu ropa.</p> </br>\n\
-                    \n\
-                    <p class='transient'>Entre tu camiseta básica negra y tu camiseta básica carbón, ves una <a class='newsituation' href='camisetaroja'>camiseta básica azabache</a> y \n\
-                    una <a class='newsituation' href='camisetaazul'>camiseta básica azul marino</a>. Te encantan estas trascendentales decisiones, aunque dada su importancia a veces \n\
-                    llegas a la parálisis por análisis.</p>"
-                    );
-            
-                    system.setCharacterText("<p>Piensas que la palabra armario es graciosa, porque arma significa arma, y río, río. Te imaginas un arma en un río. Un \n\
-                    segundo después te alivias porque nadie esté leyendo tu mente.</p>"
-                    );
-                }
             }
         }
                 
     ),
+
+    Escena2: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena3'>Mover a escena 3</a></p>\
+        <p class='transient'><a href='Escena5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo2: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena3: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena4: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo4: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena5: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena6'>Mover a escena 6</a></p>\
+        <p class='transient'><a href='Escena7'>Mover a escena 7</a></p>\
+        <p class='transient'><a href='Escena9'>Mover a escena 9</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena6: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo6: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena7: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena5'>Mover a escena 5</a></p>\
+        <p class='transient'><a href='Escena8'>Mover a escena 8</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena8: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 7'>Mover a escena 7</a></p>",
+        {
+            actions: {
+                ejemplo8: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena9: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena10'>Mover a escena 10</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena10: new undum.SimpleSituation(
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
 };
 
 // ---------------------------------------------------------------------------
