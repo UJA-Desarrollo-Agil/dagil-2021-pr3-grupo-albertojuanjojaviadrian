@@ -55,3 +55,13 @@ En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece
 (Ahora puedes jugar a piedra papel tijeras)
 
 (Introducir mensajes cuando se gane o pierda o empate, etc.) 
+
+
+
+## Escena 9 - Sala de la Fiesta
+
+aa
+
+aa
+
+a
