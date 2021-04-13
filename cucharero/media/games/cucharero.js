@@ -4,6 +4,12 @@
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
 var SUMA = 100 / 12;
+var Escena1Visitada = false;
+var Escena2Visitada = false;
+var Escena3Visitada = false;
+var Escena4Visitada = false;
+var Escena5Visitada = false;
+
 /* A unique id for your game. This is never displayed. I use a UUID,
  * but you can use anything that is guaranteed unique (a URL you own,
  * or a variation on your email address, for example). */
@@ -41,7 +47,10 @@ undum.game.situations = {
                 ejemplo1: function enter(character, system, action) { },
             },
             enter: function (character, system, action) {
-                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                if (!Escena1Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena1Visitada = true;
+                }
             }
         }
     ),
@@ -54,7 +63,10 @@ undum.game.situations = {
                 ejemplo2: function enter(character, system, action) { },
             },
             enter: function (character, system, action) {
-                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                if (!Escena2Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena2Visitada = true;
+                }
             }
         }
     ),
@@ -82,7 +94,10 @@ undum.game.situations = {
                 },
             },
             enter: function (character, system, action) {
-                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                if (!Escena3Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena3Visitada = true;
+                }
             }
         }
     ),
@@ -94,7 +109,10 @@ undum.game.situations = {
                 ejemplo4: function enter(character, system, action) { },
             },
             enter: function (character, system, action) {
-                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                if (!Escena4Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena4Visitada = true;
+                }
             }
         }
     ),
@@ -119,7 +137,10 @@ undum.game.situations = {
                 esperar: function enter(character, system, action) { },
             },
             enter: function (character, system, action) {
-                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                if (!Escena5Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena5Visitada = true;
+                }
             }
         }
     ),
