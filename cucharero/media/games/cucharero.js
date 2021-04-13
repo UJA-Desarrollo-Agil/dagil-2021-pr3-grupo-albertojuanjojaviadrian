@@ -170,8 +170,9 @@ undum.game.start = 'start';
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-    zapatillas: new undum.OnOffQuality("-Zapatillas de casa", {priority: "0001", group: 'cosas'}),
-    tiempoEspera: new undum.IntegerNoShow("Tiempo Espera", {priority: "0001", group: "invisible"}),
+    puntuacion: new undum.IntegerQuality(
+        "Puntuación", { priority: "0001", group: 'porcentaje' }
+    ),
 };
 
 // ---------------------------------------------------------------------------
@@ -181,7 +182,7 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-    cosas: new undum.QualityGroup('Cosillas', {priority: "0001"}),
+    porcentaje: new undum.QualityGroup('Porcentaje Completado', {priority: "0001"}),
     invisible: new undum.QualityGroup(null, {priority: "0000"}),
 };
 
@@ -189,7 +190,6 @@ undum.game.qualityGroups = {
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
-    character.qualities.zapatillas = false;
-    character.qualities.tiempoEspera = 0;
+    character.qualities.puntuacion = 0;
     system.setCharacterText("<p>---</p>");
 };
