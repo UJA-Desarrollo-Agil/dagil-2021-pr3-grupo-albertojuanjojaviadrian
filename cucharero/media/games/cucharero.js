@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-
+var SUMA = 100 / 12;
 /* A unique id for your game. This is never displayed. I use a UUID,
  * but you can use anything that is guaranteed unique (a URL you own,
  * or a variation on your email address, for example). */
@@ -28,6 +28,7 @@ undum.game.slideUpSpeed = 500;
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
+
   //ZONA LINEAL INICIO
   start: new undum.SimpleSituation(
     "<p class='transient'><a href='Escena1'>Mover a escena 1</a></p>"
@@ -168,6 +169,154 @@ undum.game.situations = {
       ejemplo1: function enter(character, system, action) {},
     },
   }),
+=======
+
+    //ZONA LINEAL INICIO
+    start: new undum.SimpleSituation(
+       
+        "<p class='transient'><a href='escena1'>Mover a escena 1</a></p>"
+    ),
+
+    escena1: new undum.SimpleSituation(
+        "<p class='transient'><a href='escena2'>Mover a escena 2</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+            
+        }
+                
+    ),
+
+    escena2: new undum.SimpleSituation(
+        "<p class='transient'><a href='escena3'>Mover a escena 3</a></p>\
+        <p class='transient'><a href='Escena5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo2: function enter(character, system, action){
+                   
+                },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+                
+    ),
+
+    escena3: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+                
+    ),
+
+    Escena4: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo4: function enter(character, system, action){
+                   
+                },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+                
+    ),
+
+    Escena5: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena6'>Mover a escena 6</a></p>\
+        <p class='transient'><a href='Escena7'>Mover a escena 7</a></p>\
+        <p class='transient'><a href='Escena9'>Mover a escena 9</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+                
+    ),
+
+    Escena6: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo6: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena7: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena5'>Mover a escena 5</a></p>\
+        <p class='transient'><a href='Escena8'>Mover a escena 8</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena8: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 7'>Mover a escena 7</a></p>",
+        {
+            actions: {
+                ejemplo8: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena9: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena10'>Mover a escena 10</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+    Escena10: new undum.SimpleSituation(
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action){
+                   
+                },
+            }
+        }
+                
+    ),
+
+>>>>>>> origin/apo00015_develop
 };
 
 // ---------------------------------------------------------------------------
@@ -187,6 +336,9 @@ undum.game.qualities = {
     priority: "0002",
     group: "inventario",
   }),
+    puntuacion: new undum.IntegerQuality(
+        "Puntuación", { priority: "0001", group: 'porcentaje' }
+    )
 };
 
 // ---------------------------------------------------------------------------
@@ -197,6 +349,8 @@ undum.game.qualities = {
  * non-existent group. */
 undum.game.qualityGroups = {
   inventario: new undum.QualityGroup("Inventario", { priority: "0001" }),
+    porcentaje: new undum.QualityGroup('Porcentaje Completado', {priority: "0001"}),
+    variables: new undum.QualityGroup(null, {priority: "0001"})
 };
 
 // ---------------------------------------------------------------------------
@@ -206,3 +360,9 @@ undum.game.init = function (character, system) {
   character.qualities.tarjeta = false;
   character.qualities.traje = false;
 };
+
+    character.qualities.puntuacion = 0;
+
+    system.setCharacterText("<p>---</p>");
+};
+
