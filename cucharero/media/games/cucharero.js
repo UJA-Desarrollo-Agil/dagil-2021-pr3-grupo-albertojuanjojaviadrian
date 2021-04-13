@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-
+var SUMA = 100 / 12;
 /* A unique id for your game. This is never displayed. I use a UUID,
  * but you can use anything that is guaranteed unique (a URL you own,
  * or a variation on your email address, for example). */
@@ -33,41 +33,51 @@ undum.game.situations = {
     //ZONA LINEAL INICIO
     start: new undum.SimpleSituation(
        
-        "<p class='transient'><a href='Escena1'>Mover a escena 1</a></p>"
+        "<p class='transient'><a href='escena1'>Mover a escena 1</a></p>"
     ),
 
-    Escena1: new undum.SimpleSituation(
-        "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
+    escena1: new undum.SimpleSituation(
+        "<p class='transient'><a href='escena2'>Mover a escena 2</a></p>",
         {
             actions: {
                 ejemplo1: function enter(character, system, action){
                    
                 },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
+            
         }
                 
     ),
 
-    Escena2: new undum.SimpleSituation(
-        "<p class='transient'><a href='Escena3'>Mover a escena 3</a></p>\
+    escena2: new undum.SimpleSituation(
+        "<p class='transient'><a href='escena3'>Mover a escena 3</a></p>\
         <p class='transient'><a href='Escena5'>Mover a escena 5</a></p>",
         {
             actions: {
                 ejemplo2: function enter(character, system, action){
                    
                 },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
                 
     ),
 
-    Escena3: new undum.SimpleSituation(
+    escena3: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
         {
             actions: {
                 ejemplo1: function enter(character, system, action){
                    
                 },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
                 
@@ -80,6 +90,9 @@ undum.game.situations = {
                 ejemplo4: function enter(character, system, action){
                    
                 },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
                 
@@ -94,6 +107,9 @@ undum.game.situations = {
                 ejemplo1: function enter(character, system, action){
                    
                 },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
                 
@@ -172,7 +188,7 @@ undum.game.start = 'start';
 undum.game.qualities = {
     puntuacion: new undum.IntegerQuality(
         "Puntuación", { priority: "0001", group: 'porcentaje' }
-    ),
+    )
 };
 
 // ---------------------------------------------------------------------------
@@ -183,7 +199,7 @@ undum.game.qualities = {
  * non-existent group. */
 undum.game.qualityGroups = {
     porcentaje: new undum.QualityGroup('Porcentaje Completado', {priority: "0001"}),
-    invisible: new undum.QualityGroup(null, {priority: "0000"}),
+    variables: new undum.QualityGroup(null, {priority: "0001"})
 };
 
 // ---------------------------------------------------------------------------
@@ -191,5 +207,6 @@ undum.game.qualityGroups = {
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
     character.qualities.puntuacion = 0;
+
     system.setCharacterText("<p>---</p>");
 };
