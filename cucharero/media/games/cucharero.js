@@ -29,32 +29,38 @@ undum.game.slideUpSpeed = 500;
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
 
-  //ZONA LINEAL INICIO
-  start: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena1'>Mover a escena 1</a></p>"
-  ),
+    //ZONA LINEAL INICIO
+    start: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena1'>Mover a escena 1</a></p>"
+    ),
 
-  Escena1: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) {},
-      },
-    }
-  ),
+    Escena1: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+    ),
 
-  Escena2: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena3'>Mover a escena 3</a></p>\
+    Escena2: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena3'>Mover a escena 3</a></p>\
         <p class='transient'><a href='Escena5'>Mover a escena 5</a></p>",
-    {
-      actions: {
-        ejemplo2: function enter(character, system, action) {},
-      },
-    }
-  ),
+        {
+            actions: {
+                ejemplo2: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+    ),
 
-  Escena3: new undum.SimpleSituation(
-    "<p class='transient'>Estás en el interior del almacén, lo sabes porque antes de entrar viste un bonito rótulo que así lo indicaba. \
+    Escena3: new undum.SimpleSituation(
+        "<p class='transient'>Estás en el interior del almacén, lo sabes porque antes de entrar viste un bonito rótulo que así lo indicaba. \
     Miras a tu alrededor y observas unas cuantas estanterías repletas de latas de conserva, a juzgar por su aspecto, algo antiguas. Deberán ser \
     las provisiones de los soldados tenedores que están luchando en el frente. Sientes algo de envidia, ya que aquellas <a href='./lata'>latas de conserva</a> \
     se ven mas jugosas y apetecibles que la comida que dan en el frente cucharil.</p>\
@@ -65,30 +71,36 @@ undum.game.situations = {
     \
     <p class='transient'>Terminas de observar los posters y al agachar un poco la cabeza te encuentras con un muñeco de un sargento tenedor de escala \
     real sentado en el suelo, ¡con su uniforme y todo! Puedes <a href='Escena2'>volver a la sala anterior</a>.</p>",
-    {
-      actions: {
-        lata: function enter(character, system, action) {
-          system.write(
-            '<p>Las latas de conserva son de la marca "Chucara", una famosa marca de comida enlatada producida \
+        {
+            actions: {
+                lata: function enter(character, system, action) {
+                    system.write(
+                        '<p>Las latas de conserva son de la marca "Chucara", una famosa marca de comida enlatada producida \
             por empresas afiliadas al bando cucharil. ¿cómo habrán llegado aquí?</p>'
-          );
-          system.setCharacterText("<p>De lateo que te veo.</p>");
-        },
-      },
-    }
-  ),
+                    );
+                    system.setCharacterText("<p>De lateo que te veo.</p>");
+                },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+    ),
 
-  Escena4: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
-    {
-      actions: {
-        ejemplo4: function enter(character, system, action) {},
-      },
-    }
-  ),
+    Escena4: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
+        {
+            actions: {
+                ejemplo4: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+    ),
 
-  Escena5: new undum.SimpleSituation(
-    "<p class='transient'>Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
+    Escena5: new undum.SimpleSituation(
+        "<p class='transient'>Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
     Piensas que es la adrenalina que tienes al introducirte en la sala principal de los Tenedores, como cuando mueves una tarjeta en Trello.</p>\
     \
     <p class='transient'>Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
@@ -102,15 +114,18 @@ undum.game.situations = {
     \
     <p class='transient'>A juzgar por el aspecto de esos clavos que sujetan el tablón de madera presientes que pueden caerse de un momento a otro, \
     por lo que puedes <a href='./esperar'>esperar</a>.</p>",
-    {
-      actions: {
-        esperar: function enter(character, system, action) {},
-      },
-    }
-  ),
+        {
+            actions: {
+                esperar: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+            }
+        }
+    ),
 
-  Escena6: new undum.SimpleSituation(
-    "<p class='transient'>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
+    Escena6: new undum.SimpleSituation(
+        "<p class='transient'>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
     Los tenedores a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
     Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.</p>\
     \
@@ -120,15 +135,15 @@ undum.game.situations = {
     el segundo libro es verde esmeralda y el último es azul cobalto.</p>\
     \
     <p class='transient'>También puedes volver a <a href='Escena 5'>sala principal</a>.</p>",
-    {
-      actions: {
-        ejemplo6: function enter(character, system, action) {},
-      },
-    }
-  ),
+        {
+            actions: {
+                ejemplo6: function enter(character, system, action) { },
+            },
+        }
+    ),
 
-  Escena7: new undum.SimpleSituation(
-    "Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
+    Escena7: new undum.SimpleSituation(
+        "Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
     puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche y no volvió nunca... Esperas que no se haya perdido, \
     el camino hacia la tienda es algo rebuscado.\
     \
@@ -139,41 +154,42 @@ undum.game.situations = {
     También hay tres vateres, aunque te extraña que solo uno de ellos esté <a href='Escena8'>cubierto</a> para proteger la intimidad.\
     \
     <p class='transient'>También puedes volver a <a href='Escena 5'>sala principal</a>.</p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) {},
-      },
-    }
-  ),
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+        }
+    ),
 
-  Escena8: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena 7'>Mover a escena 7</a></p>",
-    {
-      actions: {
-        ejemplo8: function enter(character, system, action) {},
-      },
-    }
-  ),
+    Escena8: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena 7'>Mover a escena 7</a></p>",
+        {
+            actions: {
+                ejemplo8: function enter(character, system, action) { },
+            },
+        }
+    ),
 
-  Escena9: new undum.SimpleSituation(
-    "<p class='transient'><a href='Escena10'>Mover a escena 10</a></p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) {},
-      },
-    }
-  ),
+    Escena9: new undum.SimpleSituation(
+        "<p class='transient'><a href='Escena10'>Mover a escena 10</a></p>",
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+        }
+    ),
 
-  Escena10: new undum.SimpleSituation({
-    actions: {
-      ejemplo1: function enter(character, system, action) {},
-    },
-  }),
-=======
+    Escena10: new undum.SimpleSituation(
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+        }
+    ),
 
     //ZONA LINEAL INICIO
     start: new undum.SimpleSituation(
-       
+
         "<p class='transient'><a href='escena1'>Mover a escena 1</a></p>"
     ),
 
@@ -181,16 +197,16 @@ undum.game.situations = {
         "<p class='transient'><a href='escena2'>Mover a escena 2</a></p>",
         {
             actions: {
-                ejemplo1: function enter(character, system, action){
-                   
+                ejemplo1: function enter(character, system, action) {
+
                 },
             },
             enter: function (character, system, action) {
                 system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
-            
+
         }
-                
+
     ),
 
     escena2: new undum.SimpleSituation(
@@ -198,45 +214,45 @@ undum.game.situations = {
         <p class='transient'><a href='Escena5'>Mover a escena 5</a></p>",
         {
             actions: {
-                ejemplo2: function enter(character, system, action){
-                   
+                ejemplo2: function enter(character, system, action) {
+
                 },
             },
             enter: function (character, system, action) {
                 system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
-                
+
     ),
 
     escena3: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena2'>Mover a escena 2</a></p>",
         {
             actions: {
-                ejemplo1: function enter(character, system, action){
-                   
+                ejemplo1: function enter(character, system, action) {
+
                 },
             },
             enter: function (character, system, action) {
                 system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
-                
+
     ),
 
     Escena4: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
         {
             actions: {
-                ejemplo4: function enter(character, system, action){
-                   
+                ejemplo4: function enter(character, system, action) {
+
                 },
             },
             enter: function (character, system, action) {
                 system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
-                
+
     ),
 
     Escena5: new undum.SimpleSituation(
@@ -245,27 +261,27 @@ undum.game.situations = {
         <p class='transient'><a href='Escena9'>Mover a escena 9</a></p>",
         {
             actions: {
-                ejemplo1: function enter(character, system, action){
-                   
+                ejemplo1: function enter(character, system, action) {
+
                 },
             },
             enter: function (character, system, action) {
                 system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
             }
         }
-                
+
     ),
 
     Escena6: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena 5'>Mover a escena 5</a></p>",
         {
             actions: {
-                ejemplo6: function enter(character, system, action){
-                   
+                ejemplo6: function enter(character, system, action) {
+
                 },
             }
         }
-                
+
     ),
 
     Escena7: new undum.SimpleSituation(
@@ -273,50 +289,49 @@ undum.game.situations = {
         <p class='transient'><a href='Escena8'>Mover a escena 8</a></p>",
         {
             actions: {
-                ejemplo1: function enter(character, system, action){
-                   
+                ejemplo1: function enter(character, system, action) {
+
                 },
             }
         }
-                
+
     ),
 
     Escena8: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena 7'>Mover a escena 7</a></p>",
         {
             actions: {
-                ejemplo8: function enter(character, system, action){
-                   
+                ejemplo8: function enter(character, system, action) {
+
                 },
             }
         }
-                
+
     ),
 
     Escena9: new undum.SimpleSituation(
         "<p class='transient'><a href='Escena10'>Mover a escena 10</a></p>",
         {
             actions: {
-                ejemplo1: function enter(character, system, action){
-                   
+                ejemplo1: function enter(character, system, action) {
+
                 },
             }
         }
-                
+
     ),
 
     Escena10: new undum.SimpleSituation(
         {
             actions: {
-                ejemplo1: function enter(character, system, action){
-                   
+                ejemplo1: function enter(character, system, action) {
+
                 },
             }
         }
-                
+
     ),
 
->>>>>>> origin/apo00015_develop
 };
 
 // ---------------------------------------------------------------------------
@@ -328,14 +343,14 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-  tarjeta: new undum.OnOffQuality("Tarjeta de seguridad", {
-    priority: "0001",
-    group: "inventario",
-  }),
-  traje: new undum.OnOffQuality("Traje cucharero", {
-    priority: "0002",
-    group: "inventario",
-  }),
+    tarjeta: new undum.OnOffQuality("Tarjeta de seguridad", {
+        priority: "0001",
+        group: "inventario",
+    }),
+    traje: new undum.OnOffQuality("Traje cucharero", {
+        priority: "0002",
+        group: "inventario",
+    }),
     puntuacion: new undum.IntegerQuality(
         "Puntuación", { priority: "0001", group: 'porcentaje' }
     )
@@ -348,21 +363,17 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-  inventario: new undum.QualityGroup("Inventario", { priority: "0001" }),
-    porcentaje: new undum.QualityGroup('Porcentaje Completado', {priority: "0001"}),
-    variables: new undum.QualityGroup(null, {priority: "0001"})
+    inventario: new undum.QualityGroup("Inventario", { priority: "0001" }),
+    porcentaje: new undum.QualityGroup('Porcentaje Completado', { priority: "0001" }),
+    variables: new undum.QualityGroup(null, { priority: "0001" })
 };
 
 // ---------------------------------------------------------------------------
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
-  character.qualities.tarjeta = false;
-  character.qualities.traje = false;
-};
-
     character.qualities.puntuacion = 0;
-
-    system.setCharacterText("<p>---</p>");
+    character.qualities.tarjeta = false;
+    character.qualities.traje = false;
 };
 
