@@ -37,9 +37,17 @@ undum.game.situations = {
 
     //ZONA LINEAL INICIO
     start: new undum.SimpleSituation(
-        "<p class='transient'><a href='escena1'>Mover a escena 1</a></p>"
-    ),
-
+      "<p class='transient'><i>Año 2188. La humanidad ha alcanzado un conocimiento casi completo del universo y niveles tecnológicos inimaginables.\
+      Sin embargo, una última gran guerra ha paralizado al mundo entero durante 50 años: la guerra del arroz.</i></p>\
+      <br>\
+      <p class='transient'><i>El mundo se dividió en dos grandes facciones:\
+      aquellos que creían que el arroz debía comerse con cuchara, y aquellos que proclamaban que había que hacerlo con tenedor.\
+      Ciudades fueron invadidas en nombre de las Cucharas, bombas surcaron los aires por parte de los Tenedores. La humanidad\
+      estaba lidiando con mucho dolor para decidir cómo se come el arroz. Pero ahora, es tu momento. Tú, un valeroso Cuchara,\
+      pondrás fin a este conflicto en una misión final, peligrosa pero decisiva. Te acabas de infiltrar en el cuartel general de los líderes Tenedores.</p>\
+      <br>\
+      <p class='transient'></i><a href='escena1'>¡Adelante!</a></p>"
+      ),
 
     escena1: new undum.SimpleSituation(
         "<p class='transient'>Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escondido en un camión automático recogebasuras, que te ha llevado\
