@@ -60,7 +60,7 @@ En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece
 
 ## Escena 9 - Sala de la Fiesta
 
-aa
+Consigues entrar en la sala del líder Tenedor, pasando desapercibido con tu flagrante nuevo traje.  
 
 aa
 
