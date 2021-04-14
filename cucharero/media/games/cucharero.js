@@ -18,6 +18,7 @@ var Escena10Visitada = false;
 var combinacionCorrecta = false;
 var colores = [];
 
+
 /* A unique id for your game. This is never displayed. I use a UUID,
  * but you can use anything that is guaranteed unique (a URL you own,
  * or a variation on your email address, for example). */
@@ -132,6 +133,7 @@ undum.game.situations = {
                         system.write(
                             "</br><p>¡Anda! Parece que el señor sargento tenía la llave que necesitas. La cogerás prestada, aunque te sientes algo mal por quitarsela.</p>"
                         );
+                        //AQUI SUMAR PUNTOS!!
                     }
                 },
             },
@@ -196,7 +198,7 @@ undum.game.situations = {
     Hechos en mármol de Carraca. Tus conocimientos viendo documentales del canal Historia te hacen cuestionar que tan caros podrían ser esos pedestales.</p>\
     \
     <p class='transient'>Frente de ti se situan 3 puertas de diferentes tamaños. La mas grande posee un gran rótulo que pone \
-    <a href='escena9'><i>\"Tridente Dorado, generalísimo de los ejércitos tenedores\"</i></a>, por lo que puedes suponer que es la sala donde se encuentran \
+    <a href='./salajefe'><i>\"Tridente Dorado, generalísimo de los ejércitos tenedores\"</i></a>, por lo que puedes suponer que es la sala donde se encuentran \
     los mayores exponentes Tenedores. La siguiente puerta posee un rótulo esta vez menos llamativo que dice <a href='escena6'><i>\"Biblioteca\"</i></a>, por \
     el nombre supones que es una biblioteca. Por último la puerta mas pequeñita posee un rótulo escrito sobre una tabla de madera \
     sujeta por dos finos clavos que dice <a href='escena7'><i>\"WC\"</i></a>, tu intelecto como estratega te sugiere que es el cuarto de baño.</p>\
@@ -205,14 +207,17 @@ undum.game.situations = {
     por lo que puedes <a href='./esperar'>esperar</a>.</p>",
         {
             actions: {
-                esperar: function enter(character, system, action) { },
+                salajefe: function (character, system, action){
+                    if (character.qualities.traje === false){
+                        system.write("<p>Tienes que buscar traje.</p></br>")
+                    } else {
+                        system.write("<p>Puedes pasar (rellenar texto) a <a href='escena9'> Sala Jefe </a>.</p></br>")
+                    }
+                },
             },
             enter: function (character, system, action) {
                 if (!Escena5Visitada) {
-                    system.setQuality(
-                        "puntuacion",
-                        character.qualities.puntuacion + SUMA
-                    );
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
                     Escena5Visitada = true;
                 }
             },
@@ -295,7 +300,7 @@ undum.game.situations = {
             puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche y no volvió nunca... Esperas que no se haya perdido, \
     el camino hacia la tienda es algo rebuscado.</p>\
     </br>\
-        <p class='transient'> Hay un lavabo con un espejo, al verte reflejado, te llena de orgullo saber que estas apunto de acabar con esta interminable guerra. \
+        <p class='transient'> Hay un lavabo con un espejo, al verte reflejado, te llena de orgullo saber que estas a punto de acabar con esta interminable guerra. \
         También hay 3 de cepillos de dientes de diferentes colores sin usar, te planteas si los tenedores se limpiaran entre las puntas, \
     debe de ser muy anti-higiénico.</p>\
     </br >\
@@ -323,34 +328,56 @@ undum.game.situations = {
     ),
 
     escena8: new undum.SimpleSituation(
-        "<p class='transient'>Entras a la sala secreta. Es una habitación pequeña, llena de pósteres de Don Tenedón\
+        "<p>Entras a la sala secreta. Es una habitación pequeña, llena de pósteres de Don Tenedón\
     y otras celebridades.</p>\
     </br>\
-    <p class='transient'>En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece que se quedó\
+    <p>En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece que se quedó\
     encerrado en la sala y nunca pudo salir. Esperas que no te pase lo mismo. Te acercas para observarle pero, de repente,\
     despierta.</p>\
     </br>\
-    <p class='transient'><i> Por fin... ¡Por fin soy libre! Entré hace 30 años en esta sala y me quedé encerrado para siempre. El arquitecto quería probar su eficacia.\
+    <p><i> Por fin... ¡Por fin soy libre! Entré hace 30 años en esta sala y me quedé encerrado para siempre. El arquitecto quería probar su eficacia\
     Supongo que funcionó. Imagino que estás aquí para acabar con todos los Tenedores. A mí déjame, yo voy a desertar. Llevo 30 años alimentándome de moho y\
-    estoy harto de esta guerra. De hecho, te ayudaré a ponerle fin. Si me ganas a <a href='./juego'>piedra, papel, tijeras</a> te daré mi traje y podrás infiltrarte en la sala de los jefes. ¡Vamos! </i>\
+    estoy harto de esta guerra. De hecho, te ayudaré a ponerle fin.</p></br>\
+    <p>Vamos a jugar a Piedra, Papel y Tijeras Modo Difícil. Tú sólo tienes piedra y yo tengo piedra, papel y tijera. Si me ganas te daré mi traje y podrás infiltrarte en la sala de los jefes. ¡Vamos!</i></p>\
     </br>\
-    <p class='transient'><a href='escena7'>Mover a escena 7</a></p>",
+    <p>Selecciona tu ataque: </p></br>\
+    <p>- <a class='once' href='./piedra'>Piedra</a> -</p></br>",
         {
             actions: {
-                ejemplo8: function enter(character, system, action) { },
+                piedra: function enter(character, system, action) { 
+
+                    //1 == piedra, 2 == papel, 3 == tijera
+                    var ataqueOtro = system.rnd.dice(1, 3);
+                    var ganado = false;
+
+                    if (ataqueOtro === 1){
+                        system.write("<p>Tu ataque: <b>Piedra</b> -- Ataque del rival: <b>Piedra</b></p></br>");
+                        system.write("<p>¡Ah, empate! ¿Me has leído la mente?</p>");
+                    } else if (ataqueOtro === 2){
+                        system.write("<p>Tu ataque: <b>Piedra</b> -- Ataque del rival: <b>Papel</b></p></br>");
+                        system.write("<p>Jeje, ¡te gané! Esto se me da bien.</p>");
+                    } else if (ataqueOtro === 3){
+                        system.write("<p>Tu ataque: <b>Piedra</b> -- Ataque del rival: <b>Tijera</b></p></br>");
+                        system.write("<p>Pero, cómo es posible... He.. ¿He perdido?</p>");
+                        ganado = true;
+                    }
+
+                    if (!ganado){
+                        system.write("<p>Selecciona tu ataque: </p></br>\
+                        <p>- <a class='once' href='./piedra'>Piedra</a> -</p></br>");
+                    } else {
+                        system.write("<p>Ganado. Ahora vuelve a <a href='escena7'>baño</a>.</p></br>");
+                        system.setQuality("traje", true);
+                        //AQUI SUMAR PUNTOS
+                    }
+                }
             },
             enter: function (character, system, action) {
                 if (!Escena8Visitada) {
                     system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
                     Escena8Visitada = true;
                 }
-            },
-            juego: function enter(character, system, action) {
-                system.setQuality("traje", true);
-                system.write(
-                    "<p>Has perdido, porque no está implementado el juego del piedra, papel y tijeras, por lo que no sabes como se juega. Aun así te da el traje. :)</p>"
-                );
-            },
+            }
         }
     ),
 
@@ -426,7 +453,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "escena6";
+undum.game.start = "escena8";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
