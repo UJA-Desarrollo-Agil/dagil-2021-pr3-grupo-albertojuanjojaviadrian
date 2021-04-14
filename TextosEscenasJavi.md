@@ -60,8 +60,36 @@ En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece
 
 ## Escena 9 - Sala de la Fiesta
 
-Consigues entrar en la sala del líder Tenedor, pasando desapercibido con tu flagrante nuevo traje.  
+Consigues entrar en la sala del líder Tenedor, pasando desapercibido con tu flagrante nuevo traje. Esperas ver a un líder imponente en un trono con forma de cubierto, o a un consejo de guerra planeando el próximo ataque tenedoril. Pero lo que ves te deja totalmente confuso.
 
-aa
+La sala del líder es una sala enorme, llena de pequeñas mesas con pocos metros de separación entre sí. Encima de esas mesas hay muchos platos, con una paellera gigante en el centro de cada una, llena de un arroz con pinta deliciosa. Pero lo que más te confunde es ver que alrededor de esas mesas hay decenas de agentes Tenedor mezclados con agentes Cuchara. Todos están comiendo el arroz sin preocupación, charlando y riendo entre ellos. Incluso llegas a ver a algunos Cucharas comiendo con tenedor, y viceversa.
 
-a
+Te habían engañado. Os habían engañado a todos. Los altos mandos Tenedores y Cucharas siempre habían estado aliados, incentivando esta guerra entre la gente de a pie por algún motivo. Ahora sólo tienes dos opciones:
+
+Únete a ellos o Lucha por tus ideas
+
+
+
+## Escena 10 - Final Lucha
+
+No puedes tolerar esto. Decides luchar por las ideas que siempre has defendido hasta el final. Miras alrededor y agarras lo primero que ves para usarlo como arma. Te dispones a atacar.
+
+Tras esta valerosa actuación, todos los agentes allí presentes empiezan a reírse a carcajadas. Uno de ellos hace un gesto y pocos segundos después estás atado de manos y pies. Te levantan fácilmente y te llevan como si fueras un saco de patatas.
+
+Poco después te encuentras en una sala casi totalmente oscura. Oyes cómo una puerta se cierra tras de ti. Te sientes totalmente desesperanzado. De repente, oyes un ligero ruido y miras a tu alrededor con atención. Ves un par de ojos brillar en la oscuridad. Otro par de pares aparecen alrededor. Pocos segundos después, cientos de ojos te miran fijamente.
+
+<<Bienvenido. Eres el número 420...>> 
+
+
+
+## Escena 10 - Final Unión
+
+Rápidamente comprendes lo que está ocurriendo. Todo era una mentira, todo por lo que habías luchado no tenía ningún sentido. Decides que lo más inteligente es unirte a ellos.
+
+Levantas las manos sobre tu cabeza y les explicas que quieres unirte a ellos. Se miran entre sí y un Tenedor habla:
+
+<<Pareces inteligente. De acuerdo, te aceptaremos. Debes saber que esta absurda guerra que expandimos durante años tiene un motivo, y este es evitar que la gente se planté la verdadera gran pregunta: ¿la tortilla, con cebolla o sin cebolla? >>
+
+Ahora entiendes la verdad. Una lágrima recorre tu mejilla mientras piensas en todos tus compañeros caídos y en todos los que siguen luchando. Ahora podrás protegerlos del verdadero mal.
+
+Miras a los grandes líderes y sonríes. Sabes qué, a partir de ahora, harás lo mejor para la humanidad. 
