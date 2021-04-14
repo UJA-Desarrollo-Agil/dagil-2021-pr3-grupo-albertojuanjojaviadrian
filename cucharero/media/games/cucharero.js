@@ -4,6 +4,7 @@
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
 var SUMA = 100 / 12;
+var intentaPasar = false;
 var Escena1Visitada = false;
 var Escena2Visitada = false;
 var Escena3Visitada = false;
@@ -40,9 +41,9 @@ undum.game.slideUpSpeed = 500;
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
 
-  //ZONA LINEAL INICIO
-  start: new undum.SimpleSituation(
-    "<p class='transient'><i>Año 2188. La humanidad ha alcanzado un conocimiento casi completo del universo y niveles tecnológicos inimaginables.\
+    //ZONA LINEAL INICIO
+    start: new undum.SimpleSituation(
+        "<p class='transient'><i>Año 2188. La humanidad ha alcanzado un conocimiento casi completo del universo y niveles tecnológicos inimaginables.\
       Sin embargo, una última gran guerra ha paralizado al mundo entero durante 50 años: la guerra del arroz.</i></p>\
       <br>\
       <p class='transient'><i>El mundo se dividió en dos grandes facciones:\
@@ -52,121 +53,141 @@ undum.game.situations = {
       pondrás fin a este conflicto en una misión final, peligrosa pero decisiva. Te acabas de infiltrar en el cuartel general de los líderes Tenedores.</p>\
       <br>\
       <p class='transient'></i><a href='escena1'>¡Adelante!</a></p>"
-  ),
+    ),
 
-  escena1: new undum.SimpleSituation(
-    "<p class='transient'>Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escondido en un camión automático recogebasuras, que te ha llevado\
+    escena1: new undum.SimpleSituation(
+        "<p class='transient'>Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escondido en un camión automático recogebasuras, que te ha llevado\
      directamente hasta allí. Eres un genio estratega, por eso te escogieron para esta misión. Aunque un genio estratega que ahora huele un poco mal.</p>\
      <br>\
      <p class='transient'>Delante de ti tienes una única puerta que parece dar al interior del cuartel general. <a href='escena2'>Puedes cruzarla.</a></p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena1Visitada) {
-          system.setQuality(
-            "puntuacion",
-            character.qualities.puntuacion + SUMA
-          );
-          Escena1Visitada = true;
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena1Visitada) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    Escena1Visitada = true;
+                }
+            },
         }
-      },
-    }
-  ),
+    ),
 
-  escena2: new undum.SimpleSituation(
-    "<p class='transient'>Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores.\
+    escena2: new undum.SimpleSituation(
+        "<p class='transient'>Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores.\
     Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil... la decoración es impresionante.</p>\
     <br>\
     <p class='transient'>A tu izquierda hay una puerta con un rótulo que dice <a href='escena3'>\"Almacén\"</a>. A tu derecha hay otra puerta que parece llevar a\
     la <a href='escena4'>sala principal</a> del cuartel general </p>",
-    {
-      actions: {
-        ejemplo2: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena2Visitada) {
-          system.setQuality(
-            "puntuacion",
-            character.qualities.puntuacion + SUMA
-          );
-          Escena2Visitada = true;
+        {
+            actions: {
+                ejemplo2: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena2Visitada) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    Escena2Visitada = true;
+                }
+            },
         }
-      },
-    }
-  ),
+    ),
 
-  escena3: new undum.SimpleSituation(
-    "<p class='transient'>Estás en el interior del almacén, lo sabes porque antes de entrar viste un bonito rótulo que así lo indicaba. \
+    escena3: new undum.SimpleSituation(
+        "<p>Estás en el interior del almacén, lo sabes porque antes de entrar viste un bonito rótulo que así lo indicaba. \
         Miras a tu alrededor y observas unas cuantas estanterías repletas de latas de conserva, a juzgar por su aspecto, algo antiguas.Deberán ser \
         las provisiones de los soldados tenedores que están luchando en el frente.Sientes algo de envidia, ya que aquellas < a href = './lata' > latas de conserva</a > \
         se ven mas jugosas y apetecibles que la comida que dan en el frente cucharil.</p >\
         <br>\
-    <p class='transient'>Mas adelante observas que en la pared hay distintos posters con propaganda \
+    <p>Mas adelante observas que en la pared hay distintos posters con propaganda \
     de tenedores. Entre ellos te fijas en uno en específico que dice así: <b>¡Uno, grande y libre!</b>, junto al \
     lema, una fotografía de un gran tenedor ondeando la bandera. No entiendes cómo podrán comer con un tenedor tan grande.</p>\
     <br>\
-    <p class='transient'>Terminas de observar los posters y al agachar un poco la cabeza te encuentras con un <a href='./sargento'>muñeco de un sargento tenedor</a> de escala \
-    real sentado en el suelo, ¡con su uniforme y todo! Puedes <a href='escena2'>volver a la sala anterior</a>.</p>",
-    {
-      actions: {
-        lata: function enter(character, system, action) {
-          system.write(
-            '<p>Las latas de conserva son de la marca "Chucara", una famosa marca de comida enlatada producida \
-            por empresas afiliadas al bando cucharil. ¿cómo habrán llegado aquí?</p>'
-          );
-          system.setCharacterText("<p>De lateo que te veo.</p>");
-        },
-        sargento: function enter(character, system, action) {
-          system.write(
-            "<p>Mirando mas de cerca al muñeco parece que no es tan... muñeco, pero realmente esta muy buenas condiciones. \
-            Parece que esta conservado en escabeche.</p>"
-          );
-          if (Escena4Visitada) {
-            system.setQuality("tarjeta", true);
-            system.write(
-              "<p>¡Anda! Parece que el señor sargento tenía la llave que necesitas. La cogerás prestada, aunque te sientes algo mal por quitarsela.</p>"
-            );
-          }
-        },
-      },
-      enter: function (character, system, action) {
-        if (!Escena3Visitada) {
-          system.setQuality(
-            "puntuacion",
-            character.qualities.puntuacion + SUMA
-          );
-          Escena3Visitada = true;
-        }
-      },
-    }
-  ),
+    <p class='transient'>Terminas de observar los posters y al agachar un poco la cabeza te encuentras con un <a class='once' href='./sargento'>muñeco de un sargento tenedor</a> de escala \
+    real sentado en el suelo, ¡con su uniforme y todo! Puedes <a href='escena2'>volver a la sala anterior</a>.</p></br>",
+        {
+            actions: {
+                lata: function enter(character, system, action) {
+                    system.write(
+                        '<p>Las latas de conserva son de la marca "Chucara", una famosa marca de comida enlatada producida \
+            por empresas afiliadas al bando cucharil. ¿cómo habrán llegado aquí?</p></br>'
+                    );
+                    system.setCharacterText("<p>De lateo que te veo.</p>");
+                },
 
-  escena4: new undum.SimpleSituation(
-    "<p class='transient'>Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción,\
+                sargento: function enter(character, system, action) {
+                    system.write(
+                        "<p>Mirando mas de cerca al muñeco parece que no es tan... muñeco, pero realmente esta muy buenas condiciones.\
+            Parece que esta conservado en escabeche.</p>"
+                    );
+                    if (intentaPasar === true && character.qualities.tarjeta === false) {
+                        system.setQuality("tarjeta", true);
+                        system.write(
+                            "</br><p>¡Anda! Parece que el señor sargento tenía la llave que necesitas. La cogerás prestada, aunque te sientes algo mal por quitarsela.</p>"
+                        );
+                    }
+                },
+            },
+            enter: function (character, system, action) {
+                if (!Escena3Visitada) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    Escena3Visitada = true;
+                }
+            },
+        }
+    ),
+
+    escena4: new undum.SimpleSituation(
+        "<p>Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción,\
     pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, observando con curiosidad las paredes de este.</p>\
     </br>\
     <p class='transient'>Llegas a la puerta de salida y estás seguro de que esta puerta sí lleva a la sala principal.\
-    Intentas <a href='escena5'>cruzarla</a>.</p>",
-    {
-      actions: {
-        ejemplo4: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena4Visitada) {
-          system.setQuality(
-            "puntuacion",
-            character.qualities.puntuacion + SUMA
-          );
-          Escena4Visitada = true;
-        }
-      },
-    }
-  ),
+    Intentas <a class='once' href='./cruzar'>cruzarla</a>.</p>",
+        {
+            actions: {
+                cruzar: function enter(character, system, action) {
+                    if (!intentaPasar) {
+                        system.write(
+                            "<p>Te acercas a la puerta que lleva a la sala principal y esperas a que se abra, ya que es automática. \
+                    Tras unos segundos, nada ocurre. Empiezas a pensar que no tienes alma y por eso la puerta no te detecta. \
+                    Luego se te ocurre una teoría más plausible; quizás debas buscar una llave electrónica para poder pasar. Decides <a href='escena2'>volver atrás</a> y buscarla.</p>"
+                        );
 
-  escena5: new undum.SimpleSituation(
-    "<p class='transient'>Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
+                        if (character.qualities.tarjeta === false) {
+                            intentaPasar = true;
+                        }
+                    }
+                    else {
+                        system.write(
+                            "<p class='transient'>Te acercas a la puerta que lleva a la sala principal una vez mas, esta vez con la tarjeta del señor sargento. \
+                    La puerta se abre sin que tu hagas nada. Resulta que si era automática, sólo tenías que acercarte un poquito más. Puedes \
+                    <a href='escena5'>pasar.</a></p>"
+                        );
+                    }
+                },
+            },
+            enter: function (character, system, action) {
+                if (!Escena4Visitada) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    Escena4Visitada = true;
+                }
+            },
+        }
+    ),
+
+    escena5: new undum.SimpleSituation(
+        "<p class='transient'>Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
     Piensas que es la adrenalina que tienes al introducirte en la sala principal de los Tenedores, como cuando mueves una tarjeta en Trello.</p>\
     \
     <p class='transient'>Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
@@ -180,24 +201,24 @@ undum.game.situations = {
     \
     <p class='transient'>A juzgar por el aspecto de esos clavos que sujetan el tablón de madera presientes que pueden caerse de un momento a otro,\
     por lo que puedes <a href='./esperar'>esperar</a>.</p>",
-    {
-      actions: {
-        esperar: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena5Visitada) {
-          system.setQuality(
-            "puntuacion",
-            character.qualities.puntuacion + SUMA
-          );
-          Escena5Visitada = true;
+        {
+            actions: {
+                esperar: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena5Visitada) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    Escena5Visitada = true;
+                }
+            },
         }
-      },
-    }
-  ),
+    ),
 
-  escena6: new undum.SimpleSituation(
-    "<p class='transient'>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
+    escena6: new undum.SimpleSituation(
+        "<p class='transient'>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
             Los tenedores a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
     Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.</p>\
     \
@@ -207,21 +228,21 @@ undum.game.situations = {
     el segundo libro es verde esmeralda y el último es azul cobalto.</p>\
     \
     <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>",
-    {
-      actions: {
-        ejemplo6: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena6Visitada) {
-          system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-          Escena6Visitada = true;
+        {
+            actions: {
+                ejemplo6: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena6Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena6Visitada = true;
+                }
+            }
         }
-      }
-    }
-  ),
+    ),
 
-  escena7: new undum.SimpleSituation(
-    "<p class='transient'> Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
+    escena7: new undum.SimpleSituation(
+        "<p class='transient'> Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
             puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche y no volvió nunca... Esperas que no se haya perdido, \
     el camino hacia la tienda es algo rebuscado.</p>\
     </br>\
@@ -232,21 +253,21 @@ undum.game.situations = {
         <p class='transient'> También hay tres vateres, aunque te extraña que solo uno de ellos esté <a href='escena8'>cubierto</a> para proteger la intimidad.</p>\
     </br >\
         <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena7Visitada) {
-          system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-          Escena7Visitada = true;
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena7Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena7Visitada = true;
+                }
+            }
         }
-      }
-    }
-  ),
+    ),
 
-  escena8: new undum.SimpleSituation(
-    "<p class='transient'>Entras a la sala secreta. Es un habitáculo pequeño, lleno de pósteres de Don Tenedón\
+    escena8: new undum.SimpleSituation(
+        "<p class='transient'>Entras a la sala secreta. Es un habitáculo pequeño, lleno de pósteres de Don Tenedón\
     y otras celebridades.</p>\
     </br>\
     <p class='transient'>En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece que se quedó\
@@ -258,27 +279,27 @@ undum.game.situations = {
     estoy harto de esta guerra. De hecho, te ayudaré a ponerle fin. Si me ganas a <a href='./juego'>piedra, papel, tijeras</a> te daré mi traje y podrás infiltrarte en la sala de los jefes. ¡Vamos! </i>\
     </br>\
     <p class='transient'><a href='escena7'>Mover a escena 7</a></p>",
-    {
-      actions: {
-        ejemplo8: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena8Visitada) {
-          system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-          Escena8Visitada = true;
+        {
+            actions: {
+                ejemplo8: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena8Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena8Visitada = true;
+                }
+            },
+            juego: function enter(character, system, action) {
+                system.setQuality("traje", true);
+                system.write(
+                    "<p>Has perdido, porque no está implementado el juego del piedra, papel y tijeras, por lo que no sabes como se juega. Aun así te da el traje. :)</p>"
+                );
+            },
         }
-      },
-      juego: function enter(character, system, action) {
-        system.setQuality("traje", true);
-        system.write(
-          "<p>Has perdido, porque no está implementado el juego del piedra, papel y tijeras, por lo que no sabes como se juega. Aun así te da el traje. :)</p>"
-        );
-      },
-    }
-  ),
+    ),
 
-  escena9: new undum.SimpleSituation(
-    "<p class='transient'>Consigues entrar en la sala del líder Tenedor, pasando desapercibido con tu flagrante nuevo traje. Esperas ver a un líder imponente en un trono con forma de cubierto,\
+    escena9: new undum.SimpleSituation(
+        "<p class='transient'>Consigues entrar en la sala del líder Tenedor, pasando desapercibido con tu flagrante nuevo traje. Esperas ver a un líder imponente en un trono con forma de cubierto,\
         o a un consejo de guerra planeando el próximo ataque tenedoril. Pero lo que ves te deja totalmente confuso.</p>\
         </br>\
         <p class='transient'>La sala del líder es una sala enorme, llena de pequeñas mesas con pocos metros de separación entre sí. Encima de esas mesas hay muchos platos, con una paellera gigante en\
@@ -289,42 +310,42 @@ undum.game.situations = {
         la gente de a pie por algún motivo. Ahora sólo tienes dos opciones:<p>\
         </br>\
         <p class='transient'><a href='escena10lucha'>Lucha por tus ideas</a> o <a href='escena10union'> únete a ellos</a>.</p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena9Visitada) {
-          system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-          Escena9Visitada = true;
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena9Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena9Visitada = true;
+                }
+            }
         }
-      }
-    }
-  ),
+    ),
 
-  escena10lucha: new undum.SimpleSituation(
-    "<p class='transient'>No puedes tolerar esto. Decides luchar por las ideas que siempre has defendido hasta el final. Miras alrededor y agarras lo primero que ves para usarlo como arma. Te dispones a atacar.</p>\
+    escena10lucha: new undum.SimpleSituation(
+        "<p class='transient'>No puedes tolerar esto. Decides luchar por las ideas que siempre has defendido hasta el final. Miras alrededor y agarras lo primero que ves para usarlo como arma. Te dispones a atacar.</p>\
         </br>\
         <p class='transient'>Tras esta valerosa actuación, todos los agentes allí presentes empiezan a reírse a carcajadas. Uno de ellos hace un gesto y pocos segundos después estás atado de manos y pies. Te levantan fácilmente y te llevan como si fueras un saco de patatas.</p>\
         </br>\
         <p class='transient'>Poco después te encuentras en una sala casi totalmente oscura. Oyes cómo una puerta se cierra tras de ti. Te sientes totalmente desesperanzado. De repente, oyes un ligero ruido y miras a tu alrededor con atención. Ves un par de ojos brillar en la oscuridad. Otro par de pares aparecen alrededor. Pocos segundos después, cientos de ojos te miran fijamente.</p>\
         </br>\
         <p class='transient'><i>Bienvenido. Eres el número 420...</i></p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena10Visitada) {
-          system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-          Escena10Visitada = true;
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena10Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena10Visitada = true;
+                }
+            }
         }
-      }
-    }
-  ),
+    ),
 
-  escena10union: new undum.SimpleSituation(
-    "<p class='transient'>Rápidamente comprendes lo que está ocurriendo. Todo era una mentira, todo por lo que habías luchado no tenía ningún sentido. Decides que lo más inteligente es unirte a ellos.</p>\
+    escena10union: new undum.SimpleSituation(
+        "<p class='transient'>Rápidamente comprendes lo que está ocurriendo. Todo era una mentira, todo por lo que habías luchado no tenía ningún sentido. Decides que lo más inteligente es unirte a ellos.</p>\
         </br>\
         <p class='transient'>Levantas las manos sobre tu cabeza y les explicas que quieres ser parte de la Unión. Se miran entre sí y un Tenedor habla:</p>\
         </br>\
@@ -333,18 +354,18 @@ undum.game.situations = {
         <p class='transient'>Ahora entiendes la verdad. Una lágrima recorre tu mejilla mientras piensas en todos tus compañeros caídos y en todos los que siguen luchando. Ahora podrás protegerlos del verdadero mal.</p>,\
         </br>\
         <p class='transient'>Miras a los grandes líderes y sonríes. Sabes qué, a partir de ahora, harás lo mejor para la humanidad. </p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) { },
-      },
-      enter: function (character, system, action) {
-        if (!Escena10Visitada) {
-          system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-          Escena10Visitada = true;
+        {
+            actions: {
+                ejemplo1: function enter(character, system, action) { },
+            },
+            enter: function (character, system, action) {
+                if (!Escena10Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena10Visitada = true;
+                }
+            }
         }
-      }
-    }
-  )
+    )
 };
 
 // ---------------------------------------------------------------------------
@@ -356,18 +377,18 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-  tarjeta: new undum.OnOffQuality("Tarjeta de seguridad", {
-    priority: "0001",
-    group: "inventario",
-  }),
-  traje: new undum.OnOffQuality("Traje cucharero", {
-    priority: "0002",
-    group: "inventario",
-  }),
-  puntuacion: new undum.IntegerQuality("Puntuación", {
-    priority: "0001",
-    group: "porcentaje",
-  }),
+    tarjeta: new undum.OnOffQuality("Tarjeta de seguridad", {
+        priority: "0001",
+        group: "inventario",
+    }),
+    traje: new undum.OnOffQuality("Traje cucharero", {
+        priority: "0002",
+        group: "inventario",
+    }),
+    puntuacion: new undum.IntegerQuality("Puntuación", {
+        priority: "0001",
+        group: "porcentaje",
+    }),
 };
 
 // ---------------------------------------------------------------------------
@@ -377,18 +398,18 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-  inventario: new undum.QualityGroup("Inventario", { priority: "0001" }),
-  porcentaje: new undum.QualityGroup("Porcentaje Completado", {
-    priority: "0001",
-  }),
-  variables: new undum.QualityGroup(null, { priority: "0001" }),
+    inventario: new undum.QualityGroup("Inventario", { priority: "0001" }),
+    porcentaje: new undum.QualityGroup("Porcentaje Completado", {
+        priority: "0001",
+    }),
+    variables: new undum.QualityGroup(null, { priority: "0001" }),
 };
 
 // ---------------------------------------------------------------------------
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
-  character.qualities.puntuacion = 0;
-  character.qualities.tarjeta = false;
-  character.qualities.traje = false;
+    character.qualities.puntuacion = 0;
+    character.qualities.tarjeta = false;
+    character.qualities.traje = false;
 };
