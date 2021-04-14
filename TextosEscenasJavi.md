@@ -70,3 +70,18 @@ Te habían engañado. Os habían engañado a todos. Los altos mandos Tenedores y
 
 
 
+## Escena 10 - Final Lucha
+
+No puedes tolerar esto. Decides luchar por las ideas que siempre has defendido hasta el final. Miras alrededor y agarras lo primero que ves para usarlo como arma. Te dispones a atacar.
+
+Tras esta valerosa actuación, todos los agentes allí presentes empiezan a reírse a carcajadas. Uno de ellos hace un gesto y pocos segundos después estás atado de manos y pies. Te levantan fácilmente y te llevan como si fueras un saco de patatas.
+
+Poco después te encuentras en una sala casi totalmente oscura. Oyes cómo una puerta se cierra tras de ti. Te sientes totalmente desesperanzado. De repente, oyes un ligero ruido y miras a tu alrededor con atención. Ves un par de ojos brillar en la oscuridad. Otro par de pares aparecen alrededor. Pocos segundos después, cientos de ojos te miran fijamente.
+
+<<Bienvenido. Eres el número 420...>> 
+
+
+
+## Escena 10 - Final Unión
+
+a
