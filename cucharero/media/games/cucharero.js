@@ -226,8 +226,8 @@ undum.game.situations = {
     \
     <p>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo.</p>\
     \
-    <p class='transient'>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color <a href='./rojo'>rojo escarlata</a>, \
-    el segundo libro es <a href='./verde'>verde esmeralda</a> y el último es <a href='./azul'>azul cobalto</a>.</p>\
+    <p class='transient'>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color <a class='once' href='./verde'>verde esmeralda</a>, \
+    el segundo libro es <a class='once' href='./rojo'>rojo escarlata</a> y el último es <a class='once' href='./azul'>azul cobalto</a>.</p>\
     \
     <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>",
         {
@@ -235,36 +235,48 @@ undum.game.situations = {
                 rojo: function enter(character, system, action) { 
                   colores.push("rojo");
 
+                  system.write("<p>El libro rojo se titula: \"Harry Botes y la Cuchara Rara\". Oyes un clic.</p></br>")
                   if(colores.length === 3){
-                    if(colores[0] === 'rojo' && colores[1] === 'verde' && colores === 'azul'){
+                    if(colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul"){
                       combinacionCorrecta = true;
 
                       system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
-                      Parece que en algun lugar ha cambiado algo.</p>")
+                      Parece que en algun lugar ha cambiado algo.</p></br>")
+                    }
+                    else{
+                      colores = []
                     }
                   }
                 },
                 verde: function enter(character, system, action) { 
                   colores.push("verde");
 
+                  system.write("<p>El libro verde se titula: \"El Chanquete\", de Platón. Oyes un clic.</p></br>")
                   if(colores.length === 3){
-                    if(colores[0] === 'rojo' && colores[1] === 'verde' && colores === 'azul'){
+                    if(colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul"){
                       combinacionCorrecta = true;
 
                       system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
-                      Parece que en algun lugar ha cambiado algo.</p>")
+                      Parece que en algun lugar ha cambiado algo.</p></br>")
+                    }
+                    else{
+                      colores = []
                     }
                   }
                 },
                 azul: function enter(character, system, action) { 
                   colores.push("azul");
 
+                  system.write("<p>El libro azul se titula: \"El libro troll\", de Rubius. Veo que son hombres de cultura. Oyes un clic.</p></br>")
                   if(colores.length === 3){
-                    if(colores[0] === 'rojo' && colores[1] === 'verde' && colores === 'azul'){
+                    if(colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul"){
                       combinacionCorrecta = true;
 
                       system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
-                      Parece que en algun lugar ha cambiado algo.</p>")
+                      Parece que en algun lugar ha cambiado algo.</p></br>")
+                    }
+                    else{
+                      colores = []
                     }
                   }
                 },
@@ -287,12 +299,19 @@ undum.game.situations = {
         También hay 3 de cepillos de dientes de diferentes colores sin usar, te planteas si los tenedores se limpiaran entre las puntas, \
     debe de ser muy anti-higiénico.</p>\
     </br >\
-        <p class='transient'> También hay tres vateres, aunque te extraña que solo uno de ellos esté <a href='escena8'>cubierto</a> para proteger la intimidad.</p>\
+        <p class='transient'> También hay tres vateres, aunque te extraña que solo uno de ellos esté <a class='once' href='./vater'>cubierto</a> para proteger la intimidad.</p>\
     </br >\
         <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>",
         {
             actions: {
-                ejemplo1: function enter(character, system, action) { },
+                vater: function enter(character, system, action) { 
+                  if(combinacionCorrecta){
+                    system.write("<p>Entras al habitáculo. Te esperabas un váter, pero sólo hay una puerta en la pared. Está oscuro y te da algo de cague, pero decides <a href='escena8'>entrar</a>.</p>")
+                  }
+                  else{
+                    system.write("<p>Está ocupado.</p>")
+                  }
+                },
             },
             enter: function (character, system, action) {
                 if (!Escena7Visitada) {
@@ -304,7 +323,7 @@ undum.game.situations = {
     ),
 
     escena8: new undum.SimpleSituation(
-        "<p class='transient'>Entras a la sala secreta. Es un habitáculo pequeño, lleno de pósteres de Don Tenedón\
+        "<p class='transient'>Entras a la sala secreta. Es una habitación pequeña, llena de pósteres de Don Tenedón\
     y otras celebridades.</p>\
     </br>\
     <p class='transient'>En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece que se quedó\
@@ -407,7 +426,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "start";
+undum.game.start = "escena6";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
