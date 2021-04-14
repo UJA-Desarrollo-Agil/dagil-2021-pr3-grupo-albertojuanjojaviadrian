@@ -84,4 +84,12 @@ Poco después te encuentras en una sala casi totalmente oscura. Oyes cómo una p
 
 ## Escena 10 - Final Unión
 
-a
+Rápidamente comprendes lo que está ocurriendo. Todo era una mentira, todo por lo que habías luchado no tenía ningún sentido. Decides que lo más inteligente es unirte a ellos.
+
+Levantas las manos sobre tu cabeza y les explicas que quieres unirte a ellos. Se miran entre sí y un Tenedor habla:
+
+<<Pareces inteligente. De acuerdo, te aceptaremos. Debes saber que esta absurda guerra que expandimos durante años tiene un motivo, y este es evitar que la gente se planté la verdadera gran pregunta: ¿la tortilla, con cebolla o sin cebolla? >>
+
+Ahora entiendes la verdad. Una lágrima recorre tu mejilla mientras piensas en todos tus compañeros caídos y en todos los que siguen luchando. Ahora podrás protegerlos del verdadero mal.
+
+Miras a los grandes líderes y sonríes. Sabes qué, a partir de ahora, harás lo mejor para la humanidad. 
