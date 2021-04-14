@@ -344,14 +344,7 @@ undum.game.situations = {
         }
       }
     }
-  ),
-
-  escena10: new undum.SimpleSituation("<p class='transient'>AAA</p>",
-    {
-      actions: {
-        ejemplo1: function enter(character, system, action) { },
-      },
-    }),
+  )
 };
 
 // ---------------------------------------------------------------------------
