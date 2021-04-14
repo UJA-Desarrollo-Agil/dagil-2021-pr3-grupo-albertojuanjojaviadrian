@@ -15,6 +15,8 @@ var Escena7Visitada = false;
 var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
+var combinacionCorrecta = false;
+var colores = [];
 
 /* A unique id for your game. This is never displayed. I use a UUID,
  * but you can use anything that is guaranteed unique (a URL you own,
@@ -218,19 +220,54 @@ undum.game.situations = {
     ),
 
     escena6: new undum.SimpleSituation(
-        "<p class='transient'>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
+        "<p>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
             Los tenedores a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
     Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.</p>\
     \
-    <p class='transient'>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo.</p>\
+    <p>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo.</p>\
     \
-    <p class='transient'>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color rojo escarlata, \
-    el segundo libro es verde esmeralda y el último es azul cobalto.</p>\
+    <p class='transient'>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color <a href='./rojo'>rojo escarlata</a>, \
+    el segundo libro es <a href='./verde'>verde esmeralda</a> y el último es <a href='./azul'>azul cobalto</a>.</p>\
     \
     <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>",
         {
             actions: {
-                ejemplo6: function enter(character, system, action) { },
+                rojo: function enter(character, system, action) { 
+                  colores.push("rojo");
+
+                  if(colores.length === 3){
+                    if(colores[0] === 'rojo' && colores[1] === 'verde' && colores === 'azul'){
+                      combinacionCorrecta = true;
+
+                      system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
+                      Parece que en algun lugar ha cambiado algo.</p>")
+                    }
+                  }
+                },
+                verde: function enter(character, system, action) { 
+                  colores.push("verde");
+
+                  if(colores.length === 3){
+                    if(colores[0] === 'rojo' && colores[1] === 'verde' && colores === 'azul'){
+                      combinacionCorrecta = true;
+
+                      system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
+                      Parece que en algun lugar ha cambiado algo.</p>")
+                    }
+                  }
+                },
+                azul: function enter(character, system, action) { 
+                  colores.push("azul");
+
+                  if(colores.length === 3){
+                    if(colores[0] === 'rojo' && colores[1] === 'verde' && colores === 'azul'){
+                      combinacionCorrecta = true;
+
+                      system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
+                      Parece que en algun lugar ha cambiado algo.</p>")
+                    }
+                  }
+                },
             },
             enter: function (character, system, action) {
                 if (!Escena6Visitada) {
