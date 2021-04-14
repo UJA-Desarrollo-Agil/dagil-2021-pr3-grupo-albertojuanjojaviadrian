@@ -9,6 +9,11 @@ var Escena2Visitada = false;
 var Escena3Visitada = false;
 var Escena4Visitada = false;
 var Escena5Visitada = false;
+var Escena6Visitada = false;
+var Escena7Visitada = false;
+var Escena8Visitada = false;
+var Escena9Visitada = false;
+var Escena10Visitada = false;
 
 /* A unique id for your game. This is never displayed. I use a UUID,
  * but you can use anything that is guaranteed unique (a URL you own,
@@ -37,7 +42,7 @@ undum.game.situations = {
 
     //ZONA LINEAL INICIO
     start: new undum.SimpleSituation(
-      "<p class='transient'><i>Año 2188. La humanidad ha alcanzado un conocimiento casi completo del universo y niveles tecnológicos inimaginables.\
+        "<p class='transient'><i>Año 2188. La humanidad ha alcanzado un conocimiento casi completo del universo y niveles tecnológicos inimaginables.\
       Sin embargo, una última gran guerra ha paralizado al mundo entero durante 50 años: la guerra del arroz.</i></p>\
       <br>\
       <p class='transient'><i>El mundo se dividió en dos grandes facciones:\
@@ -47,7 +52,7 @@ undum.game.situations = {
       pondrás fin a este conflicto en una misión final, peligrosa pero decisiva. Te acabas de infiltrar en el cuartel general de los líderes Tenedores.</p>\
       <br>\
       <p class='transient'></i><a href='escena1'>¡Adelante!</a></p>"
-      ),
+    ),
 
     escena1: new undum.SimpleSituation(
         "<p class='transient'>Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escondido en un camión automático recogebasuras, que te ha llevado\
@@ -165,7 +170,7 @@ undum.game.situations = {
         }
     ),
 
-    Escena6: new undum.SimpleSituation(
+    escena6: new undum.SimpleSituation(
         "<p class='transient'>Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
             Los tenedores a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
     Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.</p>\
@@ -180,6 +185,12 @@ undum.game.situations = {
             actions: {
                 ejemplo6: function enter(character, system, action) { },
             },
+            enter: function (character, system, action) {
+                if (!Escena6Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena5Visitada = true;
+                }
+            }
         }
     ),
 
@@ -199,6 +210,12 @@ undum.game.situations = {
             actions: {
                 ejemplo1: function enter(character, system, action) { },
             },
+            enter: function (character, system, action) {
+                if (!Escena7Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena5Visitada = true;
+                }
+            }
         }
     ),
 
@@ -218,7 +235,12 @@ undum.game.situations = {
         {
             actions: {
                 ejemplo8: function enter(character, system, action) { },
-            },
+            }, enter: function (character, system, action) {
+                if (!Escena8Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena5Visitada = true;
+                }
+            }
         }
     ),
 
@@ -228,6 +250,12 @@ undum.game.situations = {
             actions: {
                 ejemplo1: function enter(character, system, action) { },
             },
+            enter: function (character, system, action) {
+                if (!Escena9Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena5Visitada = true;
+                }
+            }
         }
     ),
 
@@ -237,6 +265,12 @@ undum.game.situations = {
             actions: {
                 ejemplo1: function enter(character, system, action) { },
             },
+            enter: function (character, system, action) {
+                if (!Escena10Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena5Visitada = true;
+                }
+            }
         }
     )
 
