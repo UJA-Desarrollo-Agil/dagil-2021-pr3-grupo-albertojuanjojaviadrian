@@ -188,7 +188,7 @@ undum.game.situations = {
             enter: function (character, system, action) {
                 if (!Escena6Visitada) {
                     system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-                    Escena5Visitada = true;
+                    Escena6Visitada = true;
                 }
             }
         }
@@ -213,7 +213,7 @@ undum.game.situations = {
             enter: function (character, system, action) {
                 if (!Escena7Visitada) {
                     system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-                    Escena5Visitada = true;
+                    Escena7Visitada = true;
                 }
             }
         }
@@ -238,7 +238,7 @@ undum.game.situations = {
             }, enter: function (character, system, action) {
                 if (!Escena8Visitada) {
                     system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-                    Escena5Visitada = true;
+                    Escena8Visitada = true;
                 }
             }
         }
@@ -263,7 +263,7 @@ undum.game.situations = {
             enter: function (character, system, action) {
                 if (!Escena9Visitada) {
                     system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-                    Escena5Visitada = true;
+                    Escena9Visitada = true;
                 }
             }
         }
@@ -284,7 +284,7 @@ undum.game.situations = {
             enter: function (character, system, action) {
                 if (!Escena10Visitada) {
                     system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-                    Escena5Visitada = true;
+                    Escena10Visitada = true;
                 }
             }
         }
@@ -307,7 +307,7 @@ undum.game.situations = {
             enter: function (character, system, action) {
                 if (!Escena10Visitada) {
                     system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-                    Escena5Visitada = true;
+                    Escena10Visitada = true;
                 }
             }
         }
