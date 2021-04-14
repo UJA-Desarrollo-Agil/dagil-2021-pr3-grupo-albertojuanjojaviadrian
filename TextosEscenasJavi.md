@@ -60,8 +60,13 @@ En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece
 
 ## Escena 9 - Sala de la Fiesta
 
-Consigues entrar en la sala del líder Tenedor, pasando desapercibido con tu flagrante nuevo traje.  
+Consigues entrar en la sala del líder Tenedor, pasando desapercibido con tu flagrante nuevo traje. Esperas ver a un líder imponente en un trono con forma de cubierto, o a un consejo de guerra planeando el próximo ataque tenedoril. Pero lo que ves te deja totalmente confuso.
 
-aa
+La sala del líder es una sala enorme, llena de pequeñas mesas con pocos metros de separación entre sí. Encima de esas mesas hay muchos platos, con una paellera gigante en el centro de cada una, llena de un arroz con pinta deliciosa. Pero lo que más te confunde es ver que alrededor de esas mesas hay decenas de agentes Tenedor mezclados con agentes Cuchara. Todos están comiendo el arroz sin preocupación, charlando y riendo entre ellos. Incluso llegas a ver a algunos Cucharas comiendo con tenedor, y viceversa.
 
-a
+Te habían engañado. Os habían engañado a todos. Los altos mandos Tenedores y Cucharas siempre habían estado aliados, incentivando esta guerra entre la gente de a pie por algún motivo. Ahora sólo tienes dos opciones:
+
+Únete a ellos o Lucha por tus ideas
+
+
+
