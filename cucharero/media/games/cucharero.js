@@ -137,7 +137,7 @@ undum.game.situations = {
                         system.write(
                             "</br><p>¡Anda! Parece que el señor sargento tenía la llave que necesitas. La cogerás prestada, aunque te sientes algo mal por quitarsela.</p>"
                         );
- 
+
                     }
                 },
             },
@@ -211,8 +211,8 @@ undum.game.situations = {
     por lo que puedes <a href='./esperar'>esperar</a>.</p>",
         {
             actions: {
-                salajefe: function (character, system, action){
-                    if (character.qualities.traje === false){
+                salajefe: function (character, system, action) {
+                    if (character.qualities.traje === false) {
                         system.write("<p>Tienes que buscar traje.</p></br>")
                     } else {
                         system.write("<p>Puedes pasar (rellenar texto) a <a href='escena9'> Sala Jefe </a>.</p></br>")
@@ -241,53 +241,53 @@ undum.game.situations = {
     <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>",
         {
             actions: {
-                rojo: function enter(character, system, action) { 
-                  colores.push("rojo");
+                rojo: function enter(character, system, action) {
+                    colores.push("rojo");
 
-                  system.write("<p>El libro rojo se titula: \"Harry Botes y la Cuchara Rara\". Oyes un clic.</p></br>")
-                  if(colores.length === 3){
-                    if(colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul"){
-                      combinacionCorrecta = true;
+                    system.write("<p>El libro rojo se titula: \"Harry Botes y la Cuchara Rara\". Oyes un clic.</p></br>")
+                    if (colores.length === 3) {
+                        if (colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul") {
+                            combinacionCorrecta = true;
 
-                      system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
+                            system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
                       Parece que en algun lugar ha cambiado algo.</p></br>")
+                        }
+                        else {
+                            colores = []
+                        }
                     }
-                    else{
-                      colores = []
-                    }
-                  }
                 },
-                verde: function enter(character, system, action) { 
-                  colores.push("verde");
+                verde: function enter(character, system, action) {
+                    colores.push("verde");
 
-                  system.write("<p>El libro verde se titula: \"El Chanquete\", de Platón. Oyes un clic.</p></br>")
-                  if(colores.length === 3){
-                    if(colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul"){
-                      combinacionCorrecta = true;
+                    system.write("<p>El libro verde se titula: \"El Chanquete\", de Platón. Oyes un clic.</p></br>")
+                    if (colores.length === 3) {
+                        if (colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul") {
+                            combinacionCorrecta = true;
 
-                      system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
+                            system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
                       Parece que en algun lugar ha cambiado algo.</p></br>")
+                        }
+                        else {
+                            colores = []
+                        }
                     }
-                    else{
-                      colores = []
-                    }
-                  }
                 },
-                azul: function enter(character, system, action) { 
-                  colores.push("azul");
+                azul: function enter(character, system, action) {
+                    colores.push("azul");
 
-                  system.write("<p>El libro azul se titula: \"El libro troll\", de Rubius. Veo que son hombres de cultura. Oyes un clic.</p></br>")
-                  if(colores.length === 3){
-                    if(colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul"){
-                      combinacionCorrecta = true;
+                    system.write("<p>El libro azul se titula: \"El libro troll\", de Rubius. Veo que son hombres de cultura. Oyes un clic.</p></br>")
+                    if (colores.length === 3) {
+                        if (colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul") {
+                            combinacionCorrecta = true;
 
-                      system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
+                            system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
                       Parece que en algun lugar ha cambiado algo.</p></br>")
+                        }
+                        else {
+                            colores = []
+                        }
                     }
-                    else{
-                      colores = []
-                    }
-                  }
                 },
             },
             enter: function (character, system, action) {
@@ -313,13 +313,13 @@ undum.game.situations = {
         <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>",
         {
             actions: {
-                vater: function enter(character, system, action) { 
-                  if(combinacionCorrecta){
-                    system.write("<p>Entras al habitáculo. Te esperabas un váter, pero sólo hay una puerta en la pared. Está oscuro y te da algo de cague, pero decides <a href='escena8'>entrar</a>.</p>")
-                  }
-                  else{
-                    system.write("<p>Está ocupado.</p>")
-                  }
+                vater: function enter(character, system, action) {
+                    if (combinacionCorrecta) {
+                        system.write("<p>Entras al habitáculo. Te esperabas un váter, pero sólo hay una puerta en la pared. Está oscuro y te da algo de cague, pero decides <a href='escena8'>entrar</a>.</p>")
+                    }
+                    else {
+                        system.write("<p>Está ocupado.</p>")
+                    }
                 },
             },
             enter: function (character, system, action) {
@@ -348,31 +348,37 @@ undum.game.situations = {
     <p>- <a class='once' href='./piedra'>Piedra</a> -</p></br>",
         {
             actions: {
-                piedra: function enter(character, system, action) { 
+                piedra: function enter(character, system, action) {
 
                     //1 == piedra, 2 == papel, 3 == tijera
                     var ataqueOtro = system.rnd.dice(1, 3);
                     var ganado = false;
 
-                    if (ataqueOtro === 1){
+                    if (ataqueOtro === 1) {
                         system.write("<p>Tu ataque: <b>Piedra</b> -- Ataque del rival: <b>Piedra</b></p></br>");
                         system.write("<p>¡Ah, empate! ¿Me has leído la mente?</p>");
-                    } else if (ataqueOtro === 2){
+                    } else if (ataqueOtro === 2) {
                         system.write("<p>Tu ataque: <b>Piedra</b> -- Ataque del rival: <b>Papel</b></p></br>");
                         system.write("<p>Jeje, ¡te gané! Esto se me da bien.</p>");
-                    } else if (ataqueOtro === 3){
+                    } else if (ataqueOtro === 3) {
                         system.write("<p>Tu ataque: <b>Piedra</b> -- Ataque del rival: <b>Tijera</b></p></br>");
                         system.write("<p>Pero, cómo es posible... He.. ¿He perdido?</p>");
                         ganado = true;
                     }
 
-                    if (!ganado){
+                    if (!ganado) {
                         system.write("<p>Selecciona tu ataque: </p></br>\
                         <p>- <a class='once' href='./piedra'>Piedra</a> -</p></br>");
                     } else {
                         system.write("<p>Ganado. Ahora vuelve a <a href='escena7'>baño</a>.</p></br>");
-                        system.setQuality("traje", true);
-                        //AQUI SUMAR PUNTOS
+
+                        if (character.qualities.traje == false) {
+                            system.setQuality("traje", true);
+                            system.setQuality(
+                                "puntuacion",
+                                character.qualities.puntuacion + SUMA
+                            );
+                        }
                     }
                 }
             },
