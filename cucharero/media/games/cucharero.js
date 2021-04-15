@@ -130,10 +130,14 @@ undum.game.situations = {
                     );
                     if (intentaPasar === true && character.qualities.tarjeta === false) {
                         system.setQuality("tarjeta", true);
+                        system.setQuality(
+                            "puntuacion",
+                            character.qualities.puntuacion + SUMA
+                        );
                         system.write(
                             "</br><p>¡Anda! Parece que el señor sargento tenía la llave que necesitas. La cogerás prestada, aunque te sientes algo mal por quitarsela.</p>"
                         );
-                        //AQUI SUMAR PUNTOS!!
+ 
                     }
                 },
             },
@@ -453,7 +457,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "escena8";
+undum.game.start = "start";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
