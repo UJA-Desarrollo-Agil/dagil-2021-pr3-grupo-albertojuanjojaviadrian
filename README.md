@@ -52,3 +52,5 @@ A continuación mostraremos las capturas de pantalla donde mostramos las diferen
 #### Tareas escogidas tras el Product Backlog Refinement
 Tras el PBR, no añadimos ninguna HU al Sprint Backlog como se puede apreciar en la imagen, por lo que el Sprint Backlog permanece igual que al comienzo de la iteración 1.
 Ya que estimamos oportuno dejar las HU para el siguiente sprint.
+
+![PBR](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/PBR.PNG)
