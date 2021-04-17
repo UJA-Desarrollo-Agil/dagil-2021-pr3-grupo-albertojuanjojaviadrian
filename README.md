@@ -54,3 +54,25 @@ Tras el PBR, no añadimos ninguna HU al Sprint Backlog como se puede apreciar en
 Ya que estimamos oportuno dejar las HU para el siguiente sprint.
 
 ![PBR](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/PBR.PNG)
+
+### Conclusiones obtenidas en la Sprint Review
+Todas las historias de usuario planificadas para este sprint han sido realizadas correctamente y sin dejar ninguna a medio completar. En este sprint hemos cogido las historias de usuarios que permiten jugar a la primera versión de nuestro juego y probar casi todas las funcionalidades, aunque por ahora hemos obviado algunos detalles: estan todas las situaciones creadas, podemos movernos entre estas...
+
+Sobre el product backlog no ha habido cambios desde el Product Backlog Refinement, sobre las previsiones, se planea en primer lugar acabar las historias de usuario que tienen un valor de infinito y priorizar sobre otras que no aportan tanto valor al proyecto.
+
+En general, el desarrollo del proyecto ha sido satisfactorio, donde ha habido un buen reparto claro de tareas por lo que todos los miembros del equipo sabían que hacer en cada momento, el problema que tuvimos ha sido la falta de concurrencia entre determinadas tareas ya que teníamos que esperar a que ciertas tareas estuvieran completadas antes del comienzo de las siguientes. Lo hemos solucionado detectando algunas de estas tareas y priorizándolas para evitar esto.
+
+El incremento en este sprint se puede comprobar ya que está toda la funcionalidad de este en el proyecto. Existe una release en el repositorio indicando el final del sprint 1.
+
+En el siguiente sprint planificaremos realizar el mayor número de historias de usuario posibles, priorizando siempre estas que tengan mucho valor o que sean muy rápidas de realizar. Las siguientes historias de usuario con más valor son: 
+1-En al menos una situación se podrá establecer un diálogo con otro personaje del juego. 
+2-Si una nueva versión del juego incluye nuevas situaciones, estas deben o bien complicar la misión inicial o bien añadir una nueva misión al juego.
+
+### Conclusiones obtenidas en la Sprint Retrospective
+Ha habido un buen clima de trabajo y respeto mutuo que ha facilitado una buena relación entre el equipo permitiendo así una buena comunicación agilizando la realización de las historias de usuario. Las herramientas de trabajo utilizadas han sido:
+- Trello para la division de tareas y saber en qué se esta trabajando.
+- GitHub lo hemos usado para compartir los cambios realizados por cada uno usando su control de versiones Git.
+- Visual Studio Code para la edición del código.
+- Telegram para la comunicación entre el equipo y avisar diariamente para la Daily Scrum, donde se encuentran los bots que nos notifican cambios en Trello y Github.
+
+Aunque en general hemos trabajado bien, pensamos en hacer un mejor reparto de tareas en el siguiente sprint para la minimización de depencias entre tareas.
