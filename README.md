@@ -76,3 +76,5 @@ Ha habido un buen clima de trabajo y respeto mutuo que ha facilitado una buena r
 - Telegram para la comunicación entre el equipo y avisar diariamente para la Daily Scrum, donde se encuentran los bots que nos notifican cambios en Trello y Github.
 
 Aunque en general hemos trabajado bien, pensamos en hacer un mejor reparto de tareas en el siguiente sprint para la minimización de depencias entre tareas.
+
+![Demostracion](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/Demostracion.PNG)
