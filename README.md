@@ -17,7 +17,6 @@ El juego contendrá elementos humorísticos y decisiones de peso en la historia.
 https://trello.com/b/kVP1d6Tx/pr%C3%A1ctica-grupal-undum-grupo-5
 
 
-
 #### Capturas del Backlog
 
 A continuación mostraremos las capturas de pantalla donde mostramos las diferentes historias de usuario dentro de nuestro Backlog.
@@ -49,3 +48,7 @@ A continuación mostraremos las capturas de pantalla donde mostramos las diferen
 #### Tareas escogidas al comienzo de la iteración 1
 
 ![Tasks](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/Tasks.png)
+
+#### Tareas escogidas tras el Product Backlog Refinement
+Tras el PBR, no añadimos ninguna HU al Sprint Backlog como se puede apreciar en la imagen, por lo que el Sprint Backlog permanece igual que al comienzo de la iteración 1.
+Ya que estimamos oportuno dejar las HU para el siguiente sprint.
