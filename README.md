@@ -82,3 +82,26 @@ Aunque en general hemos trabajado bien, pensamos en hacer un mejor reparto de ta
 #### Estado del tablon de Trello tras la finalización del Sprint
 
 ![SprintFinal](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/SprintFinal.PNG)
+
+
+
+## SPRINT 2
+
+#### Historias de Usuario elegidas y tareas
+
+![HUelegidasS21](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/sprint2historiasusuario1.png)
+![HUelegidasS22](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/sprint2historiasusuario2.png)
+
+
+
+###### Explicación sobre por qué hemos elegido cada tarea
+
+1. **En al menos una situación se podrá establecer un diálogo con otro personaje del juego**: el juego será más inmersivo al poder interactuar con otros personajes.
+2. **Si una nueva versión del juego (las entregas en cada sprint) incluye nuevas situaciones, estas deben o bien complicar la misión inicial o bien añadir una nueva misión al juego**: el juego obtendrá más escenas, haciendo para el usuario una jugabilidad más extensa y entretenida.
+3. **Se subirá el juego a un sitio web disponible on-line**: se podrá alcanzar a una mayor cantidad de jugadores.
+4. **El jugador podrá usar la acción “mirar detalladamente” (u otra similar) para poder descubrir nuevas cosas en las situaciones que no se le hayan descrito a primera vista**: el juego será más inmersivo al conocer en detalle las escenas.
+5. **Se deberá modificar el CSS del juego original, usando otras fuentes de letra, fondos de pantalla, etc**: mejorará la experencia visual del usuario, aumentando la inmersión del juego.
+6. **Se añadirá música de fondo al juego**: mejorará la experencia auditiva del usuario, aumentando la inmersión del juego .
+7. **Cada situación deberá llevar una imagen descriptiva asociada**: mejorará la experencia visual del usuario, aumentando la inmersión del juego.
+
+
