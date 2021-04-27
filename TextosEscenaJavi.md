@@ -24,7 +24,7 @@ Delante de ti tienes una única puerta que parece dar al interior del cuartel ge
 
 ## Escena 2 - Sala de los cuadros
 
-Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. -Puedes mirar en detalle los cuadros-. Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil... la decoración es impresionante.
+Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. **[Los cuadros se remontan hasta los primeros Tenedores, desde Tene-Dor hasta Ten-E-Dor, pasando por Tened-Or y Te-Nedor.]**. Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil **[Estatuas de marfil con, por supuesto, forma de tenedor.]**... la decoración es impresionante.
 
 A tu izquierda *(por aquí se puede entrar a sala donde consigues llave)* hay una puerta con un rótulo que dice "Almacén". A tu derecha hay otra puerta que parece llevar a la sala principal del cuartel general *(lleva a pasillo antesala).*
 
