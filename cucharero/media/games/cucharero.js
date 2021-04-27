@@ -15,6 +15,7 @@ var Escena7Visitada = false;
 var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
+var EscenaDialogo = false;
 var combinacionCorrecta = false;
 var colores = [];
 
@@ -192,6 +193,25 @@ undum.game.situations = {
         }
     ),
 
+    escenaDialogo: new undum.SimpleSituation(
+        "<p><h1>Sala dialogo</h1></p>",
+        {
+            actions: {
+                dialogo: function enter(character, system, action) {
+  
+                },
+            },
+            enter: function (character, system, action) {
+                if (!EscenaDialogo) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    EscenaDialogo = true;
+                }
+            },
+        }
+    ),
     escena5: new undum.SimpleSituation(
         "<p><h1>Sala Principal</h1>\Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
     Piensas que es la adrenalina que tienes al introducirte en la sala principal de los Tenedores, como cuando mueves una tarjeta en Trello.</p>\
