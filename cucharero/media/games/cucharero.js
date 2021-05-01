@@ -16,6 +16,7 @@ var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
 var EscenaDialogo = false;
+var EscenaPluma=false;
 var combinacionCorrecta = false;
 var colores = [];
 
@@ -221,11 +222,19 @@ undum.game.situations = {
                 },
                 dialogo4: function enter(character, system, action) {
                     system.write(
-                        "</br><p>Tras preguntarle, te dice que debes de ganarle al gran Dedáfono que es invicto en el lazamiento de dados para ganarle, te aconseja que deberías de ir \
+                        "</br><p>Tras preguntarle, te dice que debes de ganarle al gran Dedazo que es invicto en el lazamiento de dados para ganarle, te aconseja que deberías de ir \
                         a por la pluma de la suerte</p>\
-                        <p><a class='once' href='escena5'> Tras decirle que no necesitas ayuda procedes a ir a jugar contra el gran Dedáfono.</a></p>\
-                        <p><a class='once' href='./dialogo3'> <p>Tras pensarlo decides decirle que tiene razón y que irás primero a por la pluma</a></p>");
+                        <p><a class='once' href='escenadedazo'> Tras decirle que no necesitas ayuda procedes a ir a jugar contra el gran Dedáfono.</a></p>\
+                        <p><a class='once' href='./dialogo5'> <p>Tras pensarlo decides decirle que tiene razón y le dices que irás primero a por la pluma de la suerte</a></p>");
                 },
+                dialogo5: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Antes de irte a por la pluma te aconseja que deberás de tener mucha paciencia ya que solo el gran Dedazo y su hermano Dicephoon han conseguido \
+                        obtener el 7 necesario para conseguir la pluma tras muchísimos intentos.</p> \
+                        <p>Le contestas que no tiene nada de que preocuparse, que no saldrás de la sala hasta que no la consigas</p>\
+                        <p>El cuchillo te desea mucha suerte en tu aventura.</p>\
+                        <p><a class='once' href='escenapluma'> <p>Te vas a la sala de la pluma.</a></p>"); 
+                }
             },
             enter: function (character, system, action) {
                 if (!EscenaDialogo) {
@@ -241,8 +250,42 @@ undum.game.situations = {
 
 
     escenapluma: new undum.SimpleSituation(
-        "<p><h1>Escena pluma</h1>\
-        Descripción escena pluma</p>",
+        "<p><h1>Escena pluma de la suerte</h1>\
+        Estás en la sala donde se dice que se encuentra la pluma legendaria de la suerte, se dice que se entrega a aquellos que consiguen sacar el número 7 en un dado de 6 caras</p>\
+        <p><a href='./lanzamiento'> <p>Te dispones a tirar el dado esperando a que salga un 7 mágicamente.</a></p>",
+        {
+            actions: {
+                lanzamiento: function (character, system, action) {
+                  
+                       
+                     if(system.rnd.randomInt( 1, 7 )==7){
+                        system.write(
+                            "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
+                            revisas de nuevo las caras y al volver a la cara del 7 te das cuenta de que ese 7 ha desaparecido y aparece un uno en su lugar</p>. \
+                            </br><p>Ves que algo te ha rozado la frente, tras tocartela para ver que es, es una pluma plateada extremadamente brillante, \
+                            has encontrado la pluma de la suerte.</p>")
+                            system.setQuality("pluma", true);
+                            system.setQuality(
+                                "puntuacion",
+                                character.qualities.puntuacion + SUMA
+                            );
+                            system.write(
+                                "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
+                        
+                     }            
+            
+                },
+            },
+            enter: function (character, system, action) {
+                if (!EscenaPluma) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    EscenaPluma = true;
+                }
+            },
+        }
       
     ),
 
@@ -530,6 +573,10 @@ undum.game.qualities = {
     }),
     traje: new undum.OnOffQuality("Traje cucharero", {
         priority: "0002",
+        group: "inventario",
+    }),
+    pluma: new undum.OnOffQuality("Pluma plateada de la suerte", {
+        priority: "0003",
         group: "inventario",
     }),
     puntuacion: new undum.IntegerQuality("Puntuación", {
