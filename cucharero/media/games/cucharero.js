@@ -221,10 +221,10 @@ undum.game.situations = {
                 },
                 dialogo4: function enter(character, system, action) {
                     system.write(
-                        "</br><p>Le contestas que como puedes ayudarlo</p>\
-                        <p>Responde que el no tiene salvación ya que es muy tarde para que tenga un protagonismo en la historia, pero le gustaría antes de morir\
-                        darte una tarea para que incluyas más trabajo al proyecto y así tener mas posibilidades de tener una buena nota</p>\
-                        <p><a class='once' href='./dialogo3'> <p>Decides ayudarlo</a></p>");
+                        "</br><p>Tras preguntarle, te dice que debes de ganarle al gran Dedáfono que es invicto en el lazamiento de dados para ganarle, te aconseja que deberías de ir \
+                        a por la pluma de la suerte</p>\
+                        <p><a class='once' href='escena5'> Tras decirle que no necesitas ayuda procedes a ir a jugar contra el gran Dedáfono.</a></p>\
+                        <p><a class='once' href='./dialogo3'> <p>Tras pensarlo decides decirle que tiene razón y que irás primero a por la pluma</a></p>");
                 },
             },
             enter: function (character, system, action) {
@@ -238,6 +238,15 @@ undum.game.situations = {
             },
         }
     ),
+
+
+    escenapluma: new undum.SimpleSituation(
+        "<p><h1>Escena pluma</h1>\
+        Descripción escena pluma</p>",
+      
+    ),
+
+
     escena5: new undum.SimpleSituation(
         "<p><h1>Sala Principal</h1>\Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
     Piensas que es la adrenalina que tienes al introducirte en la sala principal de los Tenedores, como cuando mueves una tarjeta en Trello.</p>\
