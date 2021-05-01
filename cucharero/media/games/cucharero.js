@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-var SUMA = 100 / 12;
+var SUMA = 100 / 13;
 var intentaPasar = false;
 var Escena1Visitada = false;
 var Escena2Visitada = false;
@@ -176,7 +176,7 @@ undum.game.situations = {
                         system.write(
                             "</br><p class='transient'>Te acercas a la puerta que lleva a la sala principal una vez mas, esta vez con la tarjeta del señor sargento. \
                     La puerta se abre sin que tu hagas nada. Resulta que si era automática, sólo tenías que acercarte un poquito más. Puedes \
-                    <a href='escena5'>pasar.</a></p>"
+                    <a href='escenadialogo'>pasar.</a></p>"
                         );
                     }
                 },
@@ -193,12 +193,38 @@ undum.game.situations = {
         }
     ),
 
-    escenaDialogo: new undum.SimpleSituation(
-        "<p><h1>Sala dialogo</h1></p>",
+    escenadialogo: new undum.SimpleSituation(
+        "<p><h1>Sala dialogo</h1> Te encuentras con un cuchillo en mal estado el cual te pide ayuda.</p>\
+        <p class='transient'><a class='once' href='./dialogo'>Dedices hablarle</a> ya que te da pena verlo así.</p>",
         {
             actions: {
                 dialogo: function enter(character, system, action) {
-  
+                    system.write(
+                        "</br><p>Te dice que le gustaría tener un peso de protagonismo en la\
+                        historia, pero debido a que se ha creado su existencia tarde y la historia ya está completa\
+                        ya nunca podrá ser relevante y estará condenado a ser una misión secundaria.</p>\
+                        <p><a class='once' href='./dialogo2'> Decides ignorarlo ya que no tiene que ver nada contigo.</a></p>\
+                        <p><a class='once' href='./dialogo3'> <p>Decides seguir escuchando</a></p>");
+                },
+                dialogo2: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Te agarra  mientras te suplica que hables con el un momento, tras intentar soltarte sin resultado. </p>\
+                        <p><a class='once' href='./dialogo3'> <p>Decides ayudarlo/a></p>");
+                },
+                dialogo3: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Le contestas que como puedes ayudarlo</p>\
+                        <p>Responde que el no tiene salvación ya que es muy tarde para que tenga un protagonismo en la historia, pero le gustaría antes de morir\
+                        darte una tarea para que incluyas más trabajo al proyecto y así tener mas posibilidades de tener una buena nota</p>\
+                        <p><a class='once' href='escena5'> Le contestas que no tienes interés en sacar buena nota y continúas la historia.</a></p>\
+                        <p><a class='once' href='./dialogo4'> <p>Te muestras interesado por sacar buena nota y le preguntas que debes hacer</a></p>");
+                },
+                dialogo4: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Le contestas que como puedes ayudarlo</p>\
+                        <p>Responde que el no tiene salvación ya que es muy tarde para que tenga un protagonismo en la historia, pero le gustaría antes de morir\
+                        darte una tarea para que incluyas más trabajo al proyecto y así tener mas posibilidades de tener una buena nota</p>\
+                        <p><a class='once' href='./dialogo3'> <p>Decides ayudarlo</a></p>");
                 },
             },
             enter: function (character, system, action) {
