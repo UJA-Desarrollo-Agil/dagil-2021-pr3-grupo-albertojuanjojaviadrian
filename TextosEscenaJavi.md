@@ -46,7 +46,7 @@ Te acercas a la puerta que lleva a la sala principal y esperas a que se abra, ya
 
 ## Escena 8 - Sala secreta
 
-Entras a la sala secreta. Es un habitáculo pequeño, lleno de pósteres de Don Tenedón *(se puede mirar detenidamente, resulta que Don Tenedón era un rapero que concienciaba a la gente para usar el tenedor para comer arroz pero luego fue descubierto comiendo con cuchara y perdió su fama)* y otras celebridades.
+Entras a la sala secreta. Es un habitáculo pequeño, lleno de pósteres de Don Tenedón **[Recuerdas la historia del rapero Don Tenedón. Era un famoso rapero que concienciaba a la gente para que usara el tenedor a la hora de comer arroz, pero un día fue descubierto comiendo con cuchara y toda su fama cayó en picado. Para algunos un héroe, para otros un monstruo...]**  y otras celebridades.
 
 En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece que se quedó encerrado en la sala y nunca pudo salir. Esperas que no te pase lo mismo. Te acercas para observarle pero, de repente, despierta.
 
