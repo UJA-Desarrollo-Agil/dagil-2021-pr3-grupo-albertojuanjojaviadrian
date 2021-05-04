@@ -16,7 +16,7 @@ var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
 var EscenaDialogo = false;
-var EscenaPluma=false;
+var EscenaPluma = false;
 var combinacionCorrecta = false;
 var colores = [];
 
@@ -61,14 +61,19 @@ undum.game.situations = {
     ),
 
     escena1: new undum.SimpleSituation(
-        "<p><h1>Sala de basuras</h1>\
-    Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escondido en un camión automático recogebasuras, que te ha llevado\
+        "<h1>Sala de basuras</h1>\
+        <p>Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escondido en un camión automático <a href='./recogebasuras' class='once'>recogebasuras</a>, que te ha llevado\
      directamente hasta allí. Eres un genio estratega, por eso te escogieron para esta misión. Aunque un genio estratega que ahora huele un poco mal.</p>\
      <br>\
      <p class='transient'>Delante de ti tienes una única puerta que parece dar al interior del cuartel general. <a href='escena2'>Puedes cruzarla.</a></p>",
         {
             actions: {
+                recogebasuras: function (character, system, action) {
+                    system.write("</br><p>Desde el año 2024 los camiones automáticos recogebasuras se pasean por las calles absorbiendo todos los desperdicios. Estos camiones\
+                tienen buenos sensores para evitar recoger nada que no sea basura, pero por algún motivo tú lo tuviste extremadamente fácil para entrar en ellos.</p>");
+                }
             },
+
             enter: function (character, system, action) {
                 if (!Escena1Visitada) {
                     system.setQuality(
@@ -78,6 +83,7 @@ undum.game.situations = {
                     Escena1Visitada = true;
                 }
             },
+
         }
     ),
 
@@ -233,7 +239,7 @@ undum.game.situations = {
                         obtener el 7 necesario para conseguir la pluma tras muchísimos intentos.</p> \
                         <p>Le contestas que no tiene nada de que preocuparse, que no saldrás de la sala hasta que no la consigas</p>\
                         <p>El cuchillo te desea mucha suerte en tu aventura.</p>\
-                        <p><a class='once' href='escenapluma'> <p>Te vas a la sala de la pluma.</a></p>"); 
+                        <p><a class='once' href='escenapluma'> <p>Te vas a la sala de la pluma.</a></p>");
                 }
             },
             enter: function (character, system, action) {
@@ -256,24 +262,24 @@ undum.game.situations = {
         {
             actions: {
                 lanzamiento: function (character, system, action) {
-                  
-                       
-                     if(system.rnd.randomInt( 1, 7 )==7){
+
+
+                    if (system.rnd.randomInt(1, 7) == 7) {
                         system.write(
                             "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
                             revisas de nuevo las caras y al volver a la cara del 7 te das cuenta de que ese 7 ha desaparecido y aparece un uno en su lugar</p>. \
                             </br><p>Ves que algo te ha rozado la frente, tras tocartela para ver que es, es una pluma plateada extremadamente brillante, \
                             has encontrado la pluma de la suerte.</p>")
-                            system.setQuality("pluma", true);
-                            system.setQuality(
-                                "puntuacion",
-                                character.qualities.puntuacion + SUMA
-                            );
-                            system.write(
-                                "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
-                        
-                     }            
-            
+                        system.setQuality("pluma", true);
+                        system.setQuality(
+                            "puntuacion",
+                            character.qualities.puntuacion + SUMA
+                        );
+                        system.write(
+                            "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
+
+                    }
+
                 },
             },
             enter: function (character, system, action) {
@@ -286,7 +292,7 @@ undum.game.situations = {
                 }
             },
         }
-      
+
     ),
 
 
