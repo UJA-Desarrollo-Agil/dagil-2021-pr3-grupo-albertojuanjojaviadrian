@@ -24,7 +24,7 @@ Delante de ti tienes una única puerta que parece dar al interior del cuartel ge
 
 ## Escena 2 - Sala de los cuadros
 
-Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. **[Los cuadros se remontan hasta los primeros Tenedores, desde Tene-Dor hasta Ten-E-Dor, pasando por Tened-Or y Te-Nedor.]**. Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil **[Estatuas de marfil con, por supuesto, forma de tenedor.]**... la decoración es impresionante.
+Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores. **[Los cuadros se remontan hasta los primeros Tenedores, desde Tene-Dor hasta Ten-E-Dor, pasando por Tened-Or y Te-Nedor.]** **CAMILO SESTO**. Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil **[Estatuas de marfil con, por supuesto, forma de tenedor.]**... la decoración es impresionante.
 
 A tu izquierda *(por aquí se puede entrar a sala donde consigues llave)* hay una puerta con un rótulo que dice "Almacén". A tu derecha hay otra puerta que parece llevar a la sala principal del cuartel general *(lleva a pasillo antesala).*
 
@@ -32,7 +32,7 @@ A tu izquierda *(por aquí se puede entrar a sala donde consigues llave)* hay un
 
 ## Escena 4 - Pasillo antesala a la principal
 
-Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción, pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, observando con curiosidad las paredes de este. *(aquí meteremos un mirar con detalle y habrá unos agujeros por los que observar algo gracioso).*
+Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción, pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, observando **[hay unos agujeros casi imperceptibles en las paredes del pasillo. Te acercas para observar a través de ellos.  (Salto línea) Los agujeros te muestran algo sorprendente, increíble, indescriptible, innominable, que te retuerce las más profundas entrañas del cuerpo y del alma. Lo que has visto te turbará durante el resto de tus días y después de ellos, y turbará a tus hijos si los tienes, y a los hijos de tus hijos, pues el terror que has sentido ha quedado impregnado en tus genes.]** con curiosidad las paredes de este.
 
 Llegas a la puerta de salida y estás seguro de que esta puerta sí lleva a la sala principal. Intentas cruzarla *(aquí acción). (por aquí se puede entrar a la sala principal, pero sólo si has cogido la tarjeta electrónica en el almacén primero).*
 
