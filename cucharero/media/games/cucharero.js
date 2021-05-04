@@ -50,7 +50,7 @@ undum.game.situations = {
         "<p><h1>La Gran Guerra</h1>\
       <i>Año 2188. La humanidad ha alcanzado un conocimiento casi completo del universo y niveles tecnológicos inimaginables.\
       Sin embargo, una última gran guerra ha paralizado al mundo entero durante 50 años: la guerra del arroz.</i></p>\
-      <center><img src='media/img/escena0.png' width='242' height='218'></center>\
+      <br><center><img src='media/img/escena0.png' width='180' height='auto'></center><br>\
       <p><i>El mundo se dividió en dos grandes facciones:\
       aquellos que creían que el arroz debía comerse con cuchara, y aquellos que proclamaban que había que hacerlo con tenedor.\
       Ciudades fueron invadidas en nombre de las Cucharas, bombas surcaron los aires por parte de los Tenedores. La humanidad\
@@ -64,7 +64,7 @@ undum.game.situations = {
         "<p><h1>Sala de basuras</h1>\
     Te encuentras en la sala de basuras del cuartel general. Te has infiltrado escondido en un camión automático recogebasuras, que te ha llevado\
      directamente hasta allí. Eres un genio estratega, por eso te escogieron para esta misión. Aunque un genio estratega que ahora huele un poco mal.</p>\
-     <center><img src='media/img/escena1.png' width='242' height='218'></center>\
+     <br><center><img src='media/img/escena1.png' width='200' height='auto'></center><br>\
      <p class='transient'>Delante de ti tienes una única puerta que parece dar al interior del cuartel general. <a href='escena2'>Puedes cruzarla.</a></p>", {
             actions: {},
             enter: function(character, system, action) {
@@ -83,7 +83,7 @@ undum.game.situations = {
         "<p><h1>Sala de los Cuadros</h1>\
     Cruzas la puerta de la sala de basuras. Te encuentras en una habitación más grande, adornada con unos impresionantes cuadros de los líderes Tenedores.\
     Parece que los Tenedores no escatiman en gastos, al contrario que los Cucharas, que son austeros a más no poder. Terciopelo, estatuas de marfil... la decoración es impresionante.</p>\
-    <br>\
+    <br><center><img src='media/img/escena2.png' width='500' height='auto'></center><br>\
     <p class='transient'>A tu izquierda hay una puerta con un rótulo que dice <a href='escena3'>\"Almacén\"</a>. A tu derecha hay otra puerta que parece llevar a\
     la <a href='escena4'>sala principal</a> del cuartel general </p>", {
             actions: {
