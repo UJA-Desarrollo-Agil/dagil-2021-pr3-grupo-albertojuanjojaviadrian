@@ -478,7 +478,7 @@ undum.game.situations = {
         <p>La sala del líder es una sala enorme, llena de pequeñas mesas con pocos metros de separación entre sí. Encima de esas mesas hay muchos platos, con una paellera gigante en\
         el centro de cada una, llena de un arroz con pinta deliciosa. Pero lo que más te confunde es ver que alrededor de esas mesas hay decenas de agentes Tenedor mezclados con agentes Cuchara.\
         Todos están comiendo el arroz sin preocupación, charlando y riendo entre ellos. Incluso llegas a ver a algunos Cucharas comiendo con tenedor, y viceversa.<p>\
-        </br>\
+        <br><center><img src='media/img/escena7.png' width='500' height='auto'></center><br>\
         <p>Te habían engañado. Os habían engañado a todos. Los altos mandos Tenedores y Cucharas siempre habían estado aliados, incentivando esta guerra entre\
         la gente de a pie por algún motivo. Ahora sólo tienes dos opciones:<p>\
         </br>\
