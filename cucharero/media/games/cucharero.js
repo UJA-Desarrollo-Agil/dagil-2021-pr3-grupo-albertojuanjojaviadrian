@@ -107,7 +107,7 @@ undum.game.situations = {
         Miras a tu alrededor y observas unas cuantas estanterías repletas de latas de conserva, a juzgar por su aspecto, algo antiguas.Deberán ser \
         las provisiones de los soldados tenedores que están luchando en el frente.Sientes algo de envidia, ya que aquellas <a class='once' href='./lata'>latas de conserva</a> se \
         ven mas jugosas y apetecibles que la comida que dan en el frente cucharil.</p>\
-        <br>\
+        <br><center><img src='media/img/escena3.png' width='500' height='auto'></center><br>\
     <p>Mas adelante observas que en la pared hay distintos posters con propaganda \
     de tenedores. Entre ellos te fijas en uno en específico que dice así: <b>¡Uno, grande y libre!</b>, junto al \
     lema, una fotografía de un gran tenedor ondeando la bandera. No entiendes cómo podrán comer con un tenedor tan grande.</p>\
@@ -154,7 +154,7 @@ undum.game.situations = {
     escena4: new undum.SimpleSituation(
         "<p><h1>Pasillo a Sala Principal</h1>\Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción,\
     pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, observando con curiosidad las paredes de este.</p>\
-    </br>\
+    <br><center><img src='media/img/escena4.png' width='500' height='auto'></center><br>\
     <p class='transient'>Llegas a la puerta de salida y estás seguro de que esta puerta sí lleva a la sala principal.\
     Intentas <a class='once' href='./cruzar'>cruzarla</a>.</p>", {
             actions: {
@@ -288,13 +288,12 @@ undum.game.situations = {
     \
     <p>Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
     Hechos en mármol de Carraca. Tus conocimientos viendo documentales del canal Historia te hacen cuestionar que tan caros podrían ser esos pedestales.</p>\
-    \
+    <br><center><img src='media/img/escena5.png' width='500' height='auto'></center><br>\
     <p>Frente de ti se situan 3 puertas de diferentes tamaños. La mas grande posee un gran rótulo que pone \
     <a href='./salajefe'><i>\"Tridente Dorado, generalísimo de los ejércitos tenedores\"</i></a>, por lo que puedes suponer que es la sala donde se encuentran \
     los mayores exponentes Tenedores. La siguiente puerta posee un rótulo esta vez menos llamativo que dice <a href='escena6'><i>\"Biblioteca\"</i></a>, por \
     el nombre supones que es una biblioteca. Por último la puerta mas pequeñita posee un rótulo escrito sobre una tabla de madera \
     sujeta por dos finos clavos que dice <a href='escena7'><i>\"WC\"</i></a>, tu intelecto como estratega te sugiere que es el cuarto de baño.</p>\
-    \
     <p class='transient'>A juzgar por el aspecto de esos clavos que sujetan el tablón de madera presientes que pueden caerse de un momento a otro,\
     por lo que puedes <a href='./esperar'>esperar</a>.</p>", {
             actions: {
@@ -322,7 +321,7 @@ undum.game.situations = {
     Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.</p>\
     \
     <p>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo.</p>\
-    \
+    <br><center><img src='media/img/escena6.png' width='500' height='auto'></center><br>\
     <p>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color <a class='once' href='./verde'>verde esmeralda</a>, \
     el segundo libro es <a class='once' href='./rojo'>rojo escarlata</a> y el último es <a class='once' href='./azul'>azul cobalto</a>.</p>\
     \
@@ -387,7 +386,7 @@ undum.game.situations = {
         "<p><h1>Cuarto de baño</h1>\Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
             puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche y no volvió nunca... Esperas que no se haya perdido, \
     el camino hacia la tienda es algo rebuscado.</p>\
-    </br>\
+    <br><center><img src='media/img/escena7.png' width='500' height='auto'></center><br>\
         <p> Hay un lavabo con un espejo, al verte reflejado, te llena de orgullo saber que estas a punto de acabar con esta interminable guerra. \
         También hay 3 de cepillos de dientes de diferentes colores: uno rojo, otro verde y otro azul. Están sin usar, te planteas si los tenedores se limpiaran entre las puntas, \
     debe de ser muy anti-higiénico.</p>\
