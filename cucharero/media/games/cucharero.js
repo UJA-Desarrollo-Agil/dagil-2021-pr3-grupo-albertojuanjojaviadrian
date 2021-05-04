@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-var SUMA = 100 / 12;
+var SUMA = 100 / 13;
 var intentaPasar = false;
 var Escena1Visitada = false;
 var Escena2Visitada = false;
@@ -15,6 +15,8 @@ var Escena7Visitada = false;
 var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
+var EscenaDialogo = false;
+var EscenaPluma=false;
 var combinacionCorrecta = false;
 var colores = [];
 
@@ -175,7 +177,7 @@ undum.game.situations = {
                         system.write(
                             "</br><p class='transient'>Te acercas a la puerta que lleva a la sala principal una vez mas, esta vez con la tarjeta del señor sargento. \
                     La puerta se abre sin que tu hagas nada. Resulta que si era automática, sólo tenías que acercarte un poquito más. Puedes \
-                    <a href='escena5'>pasar.</a></p>"
+                    <a href='escenadialogo'>pasar.</a></p>"
                         );
                     }
                 },
@@ -191,6 +193,102 @@ undum.game.situations = {
             },
         }
     ),
+
+    escenadialogo: new undum.SimpleSituation(
+        "<p><h1>Sala dialogo</h1> Te encuentras con un cuchillo en mal estado el cual te pide ayuda.</p>\
+        <p class='transient'><a class='once' href='./dialogo'>Dedices hablarle</a> ya que te da pena verlo así.</p>",
+        {
+            actions: {
+                dialogo: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Te dice que le gustaría tener un peso de protagonismo en la\
+                        historia, pero debido a que se ha creado su existencia tarde y la historia ya está completa\
+                        ya nunca podrá ser relevante y estará condenado a ser una misión secundaria.</p>\
+                        <p><a class='once' href='./dialogo2'> Decides ignorarlo ya que no tiene que ver nada contigo.</a></p>\
+                        <p><a class='once' href='./dialogo3'> <p>Decides seguir escuchando</a></p>");
+                },
+                dialogo2: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Te agarra  mientras te suplica que hables con el un momento, tras intentar soltarte sin resultado. </p>\
+                        <p><a class='once' href='./dialogo3'> <p>Decides ayudarlo/a></p>");
+                },
+                dialogo3: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Le contestas que como puedes ayudarlo</p>\
+                        <p>Responde que el no tiene salvación ya que es muy tarde para que tenga un protagonismo en la historia, pero le gustaría antes de morir\
+                        darte una tarea para que incluyas más trabajo al proyecto y así tener mas posibilidades de tener una buena nota</p>\
+                        <p><a class='once' href='escena5'> Le contestas que no tienes interés en sacar buena nota y continúas la historia.</a></p>\
+                        <p><a class='once' href='./dialogo4'> <p>Te muestras interesado por sacar buena nota y le preguntas que debes hacer</a></p>");
+                },
+                dialogo4: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Tras preguntarle, te dice que debes de ganarle al gran Dedazo que es invicto en el lazamiento de dados para ganarle, te aconseja que deberías de ir \
+                        a por la pluma de la suerte</p>\
+                        <p><a class='once' href='escenadedazo'> Tras decirle que no necesitas ayuda procedes a ir a jugar contra el gran Dedáfono.</a></p>\
+                        <p><a class='once' href='./dialogo5'> <p>Tras pensarlo decides decirle que tiene razón y le dices que irás primero a por la pluma de la suerte</a></p>");
+                },
+                dialogo5: function enter(character, system, action) {
+                    system.write(
+                        "</br><p>Antes de irte a por la pluma te aconseja que deberás de tener mucha paciencia ya que solo el gran Dedazo y su hermano Dicephoon han conseguido \
+                        obtener el 7 necesario para conseguir la pluma tras muchísimos intentos.</p> \
+                        <p>Le contestas que no tiene nada de que preocuparse, que no saldrás de la sala hasta que no la consigas</p>\
+                        <p>El cuchillo te desea mucha suerte en tu aventura.</p>\
+                        <p><a class='once' href='escenapluma'> <p>Te vas a la sala de la pluma.</a></p>"); 
+                }
+            },
+            enter: function (character, system, action) {
+                if (!EscenaDialogo) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    EscenaDialogo = true;
+                }
+            },
+        }
+    ),
+
+
+    escenapluma: new undum.SimpleSituation(
+        "<p><h1>Escena pluma de la suerte</h1>\
+        Estás en la sala donde se dice que se encuentra la pluma legendaria de la suerte, se dice que se entrega a aquellos que consiguen sacar el número 7 en un dado de 6 caras</p>\
+        <p><a href='./lanzamiento'> <p>Te dispones a tirar el dado esperando a que salga un 7 mágicamente.</a></p>",
+        {
+            actions: {
+                lanzamiento: function (character, system, action) {
+                  
+                       
+                     if(system.rnd.randomInt( 1, 7 )==7){
+                        system.write(
+                            "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
+                            revisas de nuevo las caras y al volver a la cara del 7 te das cuenta de que ese 7 ha desaparecido y aparece un uno en su lugar</p>. \
+                            </br><p>Ves que algo te ha rozado la frente, tras tocartela para ver que es, es una pluma plateada extremadamente brillante, \
+                            has encontrado la pluma de la suerte.</p>")
+                            system.setQuality("pluma", true);
+                            system.setQuality(
+                                "puntuacion",
+                                character.qualities.puntuacion + SUMA
+                            );
+                            system.write(
+                                "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
+                        
+                     }            
+            
+                },
+            },
+            enter: function (character, system, action) {
+                if (!EscenaPluma) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    EscenaPluma = true;
+                }
+            },
+        }
+      
+    ),
+
 
     escena5: new undum.SimpleSituation(
         "<p><h1>Sala Principal</h1>\Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
@@ -475,6 +573,10 @@ undum.game.qualities = {
     }),
     traje: new undum.OnOffQuality("Traje cucharero", {
         priority: "0002",
+        group: "inventario",
+    }),
+    pluma: new undum.OnOffQuality("Pluma plateada de la suerte", {
+        priority: "0003",
         group: "inventario",
     }),
     puntuacion: new undum.IntegerQuality("Puntuación", {
