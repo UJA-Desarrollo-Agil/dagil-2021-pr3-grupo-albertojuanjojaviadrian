@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-var SUMA = 100 / 13;
+var SUMA = 100 / 14;
 var intentaPasar = false;
 var Escena1Visitada = false;
 var Escena2Visitada = false;
@@ -16,7 +16,8 @@ var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
 var EscenaDialogo = false;
-var EscenaPluma = false;
+var EscenaPluma=false;
+var EscenaDedazo=false;
 var combinacionCorrecta = false;
 var colores = [];
 
@@ -281,6 +282,77 @@ undum.game.situations = {
 
     ),
 
+    escenadedazo: new undum.SimpleSituation(
+        "<h1>Escena del Jefazo DEDAZO</h1>\
+        Estás en la sala donde se encuentra el gran lanzador de dados, comenzará una batalla épica en la que tendrás que vencer</p>\
+        <p><a href='./ejemplo2'> <p>Te dispones a lanzar los dados</a></p>",
+        
+        {
+            actions: {
+                ejemplo2: function enter(character, system, action) {
+                    
+                    var dado1;
+                    var dado2;
+                    var dado3;
+                    var sumaPersonaje;
+                    var sumaDedazo;
+
+                    if (!character.qualities.pluma) {
+                        dado1 = system.rnd.randomInt( 1, 3 );
+                        dado2 = system.rnd.randomInt( 1, 3 );
+                        dado3 = system.rnd.randomInt( 1, 3 );
+                    } else {
+                        dado1 = system.rnd.randomInt( 4, 6 );
+                        dado2 = system.rnd.randomInt( 4, 6 );
+                        dado3 = system.rnd.randomInt( 4, 6 );
+                    }
+
+                    dado1Dedazo = system.rnd.randomInt(4, 6 );
+                    dado2Dedazo = system.rnd.randomInt( 4, 6 );
+                    dado3Dedazo = system.rnd.randomInt( 4, 6 );
+
+                    system.write("<center><h3><b>Tus dados</b></h3></center>")
+                    system.write("<p>Dado 1: " + dado1 + "</p>")
+                    system.write("<p>Dado 2: " + dado2 + "</p>")
+                    system.write("<p>Dado 3: " + dado3 + "</p>")
+
+                    system.write("<center><h3><b>Dados del Jefazo DEDAZO</b></h3></center>")
+                    system.write("<p>Dado 1 jefazo: " + dado1Dedazo + "</p>")
+                    system.write("<p>Dado 2 jefazo: " + dado2Dedazo + "</p>")
+                    system.write("<p>Dado 3 jefazo: " + dado3Dedazo + "</p>")
+
+
+                    sumaPersonaje = dado1 + dado2 + dado3;
+                    sumaDedazo = dado1Dedazo + dado2Dedazo + dado3Dedazo;
+
+                    system.write("<center><h3><b>Puntuaciones</b></h3></center>")
+                    system.write("<p>Tu puntuación es de: " + sumaPersonaje + "</p>")
+                    system.write("<p>La puntuación del JEFAZO DEDAZO es de: " + sumaDedazo + "</p>")
+                    
+                    if (sumaDedazo < sumaPersonaje) {
+                        system.write("<h3><b>Bravoooo!!!! HAS GANADO AL JEFAZO DEDAZO</b></h3>")
+                        system.write("<p>Una vez que ya has derrotado al jefazo puedes volver a <a  href='escena5'>la sala principal</a></p>")
+                    } else {
+                        system.write("<p>Has perdido gran F</p>")
+                        system.write("<a href='./ejemplo2'> <p>Volver a lanzar</a>")
+                        if(!character.qualities.pluma){
+                            system.write("<p><a href='escenapluma'> <p>Buscar pluma</a> </p>")
+                        }
+                    }
+
+                },
+            },
+            enter: function (character, system, action) {
+                if (!EscenaDedazo) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    EscenaDedazo = true;
+                }
+            },
+        }
+    ),
 
     escena5: new undum.SimpleSituation(
         "<p><h1>Sala Principal</h1>\Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
