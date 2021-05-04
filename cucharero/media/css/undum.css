@@ -163,12 +163,6 @@ hr {
     height: 2px;
 }
 
-p+p,
-p+img+p,
-p+hr+p {
-    text-indent: 1.6em;
-}
-
 ul {
     margin: 0;
     padding: 0 0 0 1em;
