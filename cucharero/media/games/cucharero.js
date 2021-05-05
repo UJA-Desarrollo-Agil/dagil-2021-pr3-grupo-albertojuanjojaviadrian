@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-var SUMA = 100 / 14;
+var SUMA = 100 / 17;
 var intentaPasar = false;
 var Escena1Visitada = false;
 var Escena2Visitada = false;
@@ -246,12 +246,12 @@ undum.game.situations = {
     escenapluma: new undum.SimpleSituation(
         "<p><h1>Escena pluma de la suerte</h1>\
         Estás en la sala donde se dice que se encuentra la pluma legendaria de la suerte, se dice que se entrega a aquellos que consiguen sacar el número 7 en un dado de 6 caras</p>\
-        <p><a href='./lanzamiento'> <p>Te dispones a tirar el dado esperando a que salga un 7 mágicamente.</a></p>", {
+        <p><a href='./lanzamiento' class='once'> Te dispones a tirar el dado esperando a que salga un 7 mágicamente.</a></p>", {
             actions: {
                 lanzamiento: function(character, system, action) {
 
-
-                    if (system.rnd.randomInt(1, 7) == 7) {
+                    var lanzamiento=system.rnd.randomInt(1, 7)
+                    if (lanzamiento== 7) {
                         system.write(
                             "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
                             revisas de nuevo las caras y al volver a la cara del 7 te das cuenta de que ese 7 ha desaparecido y aparece un uno en su lugar</p>. \
@@ -265,6 +265,9 @@ undum.game.situations = {
                         system.write(
                             "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
 
+                    }else{
+                            system.write("<p>Miras el dado y ves que ha salido un: " + lanzamiento + "</p>");
+                            system.write("<p>Sabes que puede que nunca sacarás el 7, <a class='once' href='./lanzamiento'> pero te dispones a lanzarlo otra vez</a></p>");
                     }
 
                 },
