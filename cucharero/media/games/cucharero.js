@@ -377,42 +377,40 @@ undum.game.situations = {
     ),
 
     escena5: new undum.SimpleSituation(
-        "<p><h1>Sala Principal</h1>\Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
-    Piensas que es la adrenalina que tienes al introducirte en la sala principal de los Tenedores, como cuando mueves una tarjeta en Trello.</p>\
+        "<h1>Sala Principal</h1>\<p>Finalmente acabas entrando en la sala principal del complejo. Sientes un cosquilleo que te recorre el cuerpo, un subidón de dopamina, similar a cuando mueves una tarjeta en Trello.</p>\
     \
-    <p>Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
+    </br><p>Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
     Hechos en mármol de Carraca. Tus conocimientos viendo documentales del canal Historia te hacen cuestionar que tan caros podrían ser esos pedestales.</p>\
     <br><center><img src='media/img/escena5.png' width='500' height='auto'></center><br>\
-    <p>Frente de ti se situan 3 puertas de diferentes tamaños. La mas grande posee un gran rótulo que pone \
-    <a href='./salajefe'><i>\"Tridente Dorado, generalísimo de los ejércitos tenedores\"</i></a>, por lo que puedes suponer que es la sala donde se encuentran \
-    los mayores exponentes Tenedores. La siguiente puerta posee un rótulo esta vez menos llamativo que dice <a href='escena6'><i>\"Biblioteca\"</i></a>, por \
-    el nombre supones que es una biblioteca. Por último la puerta mas pequeñita posee un rótulo escrito sobre una tabla de madera \
-    sujeta por dos finos clavos que dice <a href='escena7'><i>\"WC\"</i></a>, tu intelecto como estratega te sugiere que es el cuarto de baño.</p>\
-    <p class='transient'>A juzgar por el aspecto de esos clavos que sujetan el tablón de madera presientes que pueden caerse de un momento a otro,\
-    por lo que puedes <a href='./esperar'>esperar</a>.</p>", {
-        actions: {
-            salajefe: function (character, system, action) {
-                if (character.qualities.traje === false) {
-                    system.write("</br><p>Tienes que buscar traje.</p>")
-                } else {
-                    system.write("<p>Puedes pasar (rellenar texto) a <a href='escena9'> Sala Jefe </a>.</p></br>")
+    <p>Frente a ti se sitúan 3 puertas de diferentes tamaños:</p> </br><p>La mas grande está decorada con un rótulo que dice\
+    <a href='./salajefe'><i>\"Tridente Dorado, Generalísimo de los Ejércitos Tenedores\"</i></a>, por lo que puedes suponer que es la sala donde se encuentran \
+    los mayores exponentes Tenedores.</p> </br><p>La siguiente puerta posee un rótulo esta vez menos llamativo que dice <a href='escena6'><i>\"Biblioteca\"</i></a>. Por \
+    el nombre supones que es una biblioteca.</p> </br><p>Por último la puerta más pequeña posee un rótulo escrito sobre una tabla de madera \
+    sujeta por dos finos clavos que dice <a href='escena7'><i>\"WC\"</i></a>. Tu intelecto estratega te sugiere que es el cuarto de baño.</p>",
+        {
+            actions: {
+                salajefe: function (character, system, action) {
+                    if (character.qualities.traje === false) {
+                        system.write("</br><p>Tienes que buscar traje.</p>")
+                    } else {
+                        system.write("<p>Puedes pasar (rellenar texto) a <a href='escena9'> Sala Jefe </a>.</p></br>")
+                    }
+                },
+            },
+            enter: function (character, system, action) {
+                if (!Escena5Visitada) {
+                    system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
+                    Escena5Visitada = true;
                 }
             },
-        },
-        enter: function (character, system, action) {
-            if (!Escena5Visitada) {
-                system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
-                Escena5Visitada = true;
-            }
-        },
-    }
+        }
     ),
 
     escena6: new undum.SimpleSituation(
         "<p><h1>Biblioteca</h1>\
         Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
-            Los tenedores a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
-    Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero nunca pudiste por la guerra que atormenta al mundo.</p>\
+            Los tenedores, a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
+    Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero que nunca pudiste por la guerra que atormenta al mundo.</p>\
     \
     <p>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo.</p>\
     <br><center><img src='media/img/escena6.png' width='500' height='auto'></center><br>\
@@ -477,15 +475,15 @@ undum.game.situations = {
     ),
 
     escena7: new undum.SimpleSituation(
-        "<p><h1>Cuarto de baño</h1>\Entras al cuarto de baño, es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
-            puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche y no volvió nunca... Esperas que no se haya perdido, \
-    el camino hacia la tienda es algo rebuscado.</p>\
+        "<p><h1>Cuarto de baño</h1>\Entras al cuarto de baño. Es bastante grande, comparado con el tamaño de la puerta. Te sorprende ver un cuarto de baño tan reluciente, \
+            puesto que no viste uno tan limpio desde que tu madre se fue a comprar leche hace 5 años... Esperas que no se haya perdido, \
+    el camino hacia la tienda es algo complicado.</p>\
     <br><center><img src='media/img/escena7.png' width='500' height='auto'></center><br>\
-        <p> Hay un lavabo con un espejo, al verte reflejado, te llena de orgullo saber que estas a punto de acabar con esta interminable guerra. \
-        También hay 3 de cepillos de dientes de diferentes colores: uno rojo, otro verde y otro azul. Están sin usar, te planteas si los tenedores se limpiaran entre las puntas, \
-    debe de ser muy anti-higiénico.</p>\
+        <p> Cerca de ti ves un lavabo con un espejo. Al ver tu reflejo te llena de orgullo saber que estás a punto de acabar con esta horrible guerra. \
+        También hay 3 de cepillos de dientes de diferentes colores: uno rojo, otro verde y otro azul. Están como nuevos, sin usar. Casi dirías que, si vivieras en una aventura narrativa, serían la\
+        clave para resolver algún puzzle. Quizá relacionado con libros...</p>\
     </br >\
-        <p> También hay tres vateres, aunque te extraña que solo uno de ellos esté <a class='once' href='./vater'>cubierto</a> para proteger la intimidad.</p>\
+        <p> También hay tres váteres, aunque te extraña que sólo uno de ellos esté <a class='once' href='./vater'>cubierto</a> para proteger la intimidad.</p>\
     </br >\
         <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>", {
         actions: {
@@ -638,7 +636,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "start";
+undum.game.start = "escena5";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
