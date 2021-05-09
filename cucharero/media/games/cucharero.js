@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-var SUMA = 100 / 13;
+var SUMA = 100 / 17;
 var intentaPasar = false;
 var Escena1Visitada = false;
 var Escena2Visitada = false;
@@ -16,7 +16,8 @@ var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
 var EscenaDialogo = false;
-var EscenaPluma = false;
+var EscenaPluma=false;
+var EscenaDedazo=false;
 var combinacionCorrecta = false;
 var colores = [];
 
@@ -258,16 +259,34 @@ undum.game.situations = {
     escenapluma: new undum.SimpleSituation(
         "<p><h1>Escena pluma de la suerte</h1>\
         Estás en la sala donde se dice que se encuentra la pluma legendaria de la suerte, se dice que se entrega a aquellos que consiguen sacar el número 7 en un dado de 6 caras</p>\
-        <p><a href='./lanzamiento'> <p>Te dispones a tirar el dado esperando a que salga un 7 mágicamente.</a></p>", {
-        actions: {
-            lanzamiento: function (character, system, action) {
-                if (system.rnd.randomInt(1, 7) == 7) {
-                    system.write(
-                        "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
+        <p><a href='./lanzamiento' class='once'> Te dispones a tirar el dado esperando a que salga un 7 mágicamente.</a></p>", {
+            actions: {
+                lanzamiento: function(character, system, action) {
+
+                    var lanzamiento=system.rnd.randomInt(1, 7)
+                    if (lanzamiento== 7) {
+                        system.write(
+                            "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
                             revisas de nuevo las caras y al volver a la cara del 7 te das cuenta de que ese 7 ha desaparecido y aparece un uno en su lugar</p>. \
                             </br><p>Ves que algo te ha rozado la frente, tras tocartela para ver que es, es una pluma plateada extremadamente brillante, \
                             has encontrado la pluma de la suerte.</p>")
-                    system.setQuality("pluma", true);
+                        system.setQuality("pluma", true);
+                        system.setQuality(
+                            "puntuacion",
+                            character.qualities.puntuacion + SUMA
+                        );
+                        system.write(
+                            "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
+
+                    }else{
+                            system.write("<p>Miras el dado y ves que ha salido un: " + lanzamiento + "</p>");
+                            system.write("<p>Sabes que puede que nunca sacarás el 7, <a class='once' href='./lanzamiento'> pero te dispones a lanzarlo otra vez</a></p>");
+                    }
+
+                },
+            },
+            enter: function(character, system, action) {
+                if (!EscenaPluma) {
                     system.setQuality(
                         "puntuacion",
                         character.qualities.puntuacion + SUMA
@@ -279,19 +298,79 @@ undum.game.situations = {
 
             },
         },
-        enter: function (character, system, action) {
-            if (!EscenaPluma) {
-                system.setQuality(
-                    "puntuacion",
-                    character.qualities.puntuacion + SUMA
-                );
-                EscenaPluma = true;
-            }
-        },
-    }
-
     ),
 
+    escenadedazo: new undum.SimpleSituation(
+        "<h1>Escena del Jefazo DEDAZO</h1>\
+        Estás en la sala donde se encuentra el gran lanzador de dados, comenzará una batalla épica en la que tendrás que vencer</p>\
+        <p><a href='./ejemplo2'> <p>Te dispones a lanzar los dados</a></p>",
+        
+        {
+            actions: {
+                ejemplo2: function enter(character, system, action) {
+                    
+                    var dado1;
+                    var dado2;
+                    var dado3;
+                    var sumaPersonaje;
+                    var sumaDedazo;
+
+                    if (!character.qualities.pluma) {
+                        dado1 = system.rnd.randomInt( 1, 3 );
+                        dado2 = system.rnd.randomInt( 1, 3 );
+                        dado3 = system.rnd.randomInt( 1, 3 );
+                    } else {
+                        dado1 = system.rnd.randomInt( 4, 6 );
+                        dado2 = system.rnd.randomInt( 4, 6 );
+                        dado3 = system.rnd.randomInt( 4, 6 );
+                    }
+
+                    dado1Dedazo = system.rnd.randomInt(4, 6 );
+                    dado2Dedazo = system.rnd.randomInt( 4, 6 );
+                    dado3Dedazo = system.rnd.randomInt( 4, 6 );
+
+                    system.write("<center><h3><b>Tus dados</b></h3></center>")
+                    system.write("<p>Dado 1: " + dado1 + "</p>")
+                    system.write("<p>Dado 2: " + dado2 + "</p>")
+                    system.write("<p>Dado 3: " + dado3 + "</p>")
+
+                    system.write("<center><h3><b>Dados del Jefazo DEDAZO</b></h3></center>")
+                    system.write("<p>Dado 1 jefazo: " + dado1Dedazo + "</p>")
+                    system.write("<p>Dado 2 jefazo: " + dado2Dedazo + "</p>")
+                    system.write("<p>Dado 3 jefazo: " + dado3Dedazo + "</p>")
+
+
+                    sumaPersonaje = dado1 + dado2 + dado3;
+                    sumaDedazo = dado1Dedazo + dado2Dedazo + dado3Dedazo;
+
+                    system.write("<center><h3><b>Puntuaciones</b></h3></center>")
+                    system.write("<p>Tu puntuación es de: " + sumaPersonaje + "</p>")
+                    system.write("<p>La puntuación del JEFAZO DEDAZO es de: " + sumaDedazo + "</p>")
+                    
+                    if (sumaDedazo < sumaPersonaje) {
+                        system.write("<h3><b>Bravoooo!!!! HAS GANADO AL JEFAZO DEDAZO</b></h3>")
+                        system.write("<p>Una vez que ya has derrotado al jefazo puedes volver a <a  href='escena5'>la sala principal</a></p>")
+                    } else {
+                        system.write("<p>Has perdido gran F</p>")
+                        system.write("<a href='./ejemplo2'> <p>Volver a lanzar</a>")
+                        if(!character.qualities.pluma){
+                            system.write("<p><a href='escenapluma'> <p>Buscar pluma</a> </p>")
+                        }
+                    }
+
+                },
+            },
+            enter: function (character, system, action) {
+                if (!EscenaDedazo) {
+                    system.setQuality(
+                        "puntuacion",
+                        character.qualities.puntuacion + SUMA
+                    );
+                    EscenaDedazo = true;
+                }
+            },
+        }
+    ),
 
     escena5: new undum.SimpleSituation(
         "<p><h1>Sala Principal</h1>\Tras cruzar la puerta con la llave electrónica, sientes un cosquilleo que te recorre el cuerpo. \
