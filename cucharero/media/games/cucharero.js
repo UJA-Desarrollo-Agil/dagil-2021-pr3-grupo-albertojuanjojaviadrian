@@ -117,17 +117,17 @@ undum.game.situations = {
 
     escena3: new undum.SimpleSituation(
         "<h1>Almacén</h1>\
-    <p>Estás en el interior del almacén, lo sabes porque antes de entrar viste un bonito rótulo que así lo indicaba. \
-        Miras a tu alrededor y observas unas cuantas estanterías repletas de latas de conserva, a juzgar por su aspecto, algo antiguas.Deberán ser \
-        las provisiones de los soldados tenedores que están luchando en el frente.Sientes algo de envidia, ya que aquellas <a class='once' href='./lata'>latas de conserva</a> se \
+    <p>Estás en el interior del almacén. \
+        Miras a tu alrededor y observas unas cuantas estanterías repletas de latas de conserva, a juzgar por su aspecto, algo antiguas. Deberán ser \
+        las provisiones de los soldados Tenedores que están luchando en el frente. Sientes algo de envidia, ya que aquellas <a class='once' href='./lata'>latas de conserva</a> se \
         ven mas jugosas y apetecibles que la comida que dan en el frente cucharil.</p>\
         <br><center><img src='media/img/escena3.png' width='500' height='auto'></center><br>\
     <p>Mas adelante observas que en la pared hay distintos posters con propaganda \
-    de tenedores. Entre ellos te fijas en uno en específico que dice así: <b>¡Uno, grande y libre!</b>, junto al \
-    lema, una fotografía de un gran tenedor ondeando la bandera. No entiendes cómo podrán comer con un tenedor tan grande.</p>\
+    de tenedores. Te fijas en uno en específico que dice así: <b>¡Uno, grande y libre!</b> Junto al \
+    lema, una fotografía de un gran tenedor ondeando la bandera. No entiendes cómo podrían comer con un tenedor tan grande.</p>\
     <br>\
     <p class='transient'>Terminas de observar los posters y al agachar un poco la cabeza te encuentras con un <a class='once' href='./sargento'>muñeco de un sargento tenedor</a> de escala \
-    real sentado en el suelo, ¡con su uniforme y todo! Puedes <a href='escena2'>volver a la sala anterior</a>.</p></br>", {
+    real sentado en el suelo, ¡con su uniforme y todo! También puedes <a href='escena2'>volver a la sala anterior</a>.</p></br>", {
         actions: {
             lata: function (character, system, action) {
                 system.write("<p>Las latas de conserva son de la marca \"Chucara\", una famosa marca de comida enlatada producida\
@@ -136,8 +136,7 @@ undum.game.situations = {
 
             sargento: function (character, system, action) {
                 system.write(
-                    "<p>Mirando mas de cerca al muñeco parece que no es tan... muñeco, pero realmente está en muy buenas condiciones.\
-            Como conservado en escabeche.</p>"
+                    "<p>Mirando mas de cerca al muñeco parece que más que muñeco, está moñeco. Pero se mantiene conservado en muy buenas condiciones. Como en escabeche.</p>"
                 );
 
                 if (intentaPasar === true && character.qualities.tarjeta === false) {
@@ -147,9 +146,8 @@ undum.game.situations = {
                         character.qualities.puntuacion + SUMA
                     );
                     system.write(
-                        "</br><p>¡Anda! Parece que el señor sargento tenía la llave que necesitas. La cogerás prestada, aunque te sientes algo mal por quitarsela.</p>"
+                        "</br><p>¡Anda! Parece que el señor sargento tenía la llave que necesitas. La cogerás prestada, no crees que la vuelva a necesitar.</p>"
                     );
-
                 }
             },
         },
@@ -169,7 +167,7 @@ undum.game.situations = {
         "<h1>Pasillo a Sala Principal</h1>\<p>Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción,\
     pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, <a class='once' href='./agujeros'>observando</a> con curiosidad las paredes de este.</p>\
     <br><center><img src='media/img/escena4.png' width='500' height='auto'></center><br>\
-    <p class='transient'>Llegas a la puerta de salida y estás seguro de que esta puerta sí lleva a la sala principal.\
+    <p>Llegas a la puerta de salida y estás seguro de que esta puerta sí lleva a la sala principal.\
     Intentas <a class='once' href='./cruzar'>cruzarla</a>.</p>", {
         actions: {
             cruzar: function enter(character, system, action) {
@@ -184,7 +182,7 @@ undum.game.situations = {
                 } else {
                     system.write(
                         "</br><p class='transient'>Te acercas a la puerta que lleva a la sala principal una vez mas, esta vez con la tarjeta del señor sargento. \
-                    La puerta se abre sin que tu hagas nada. Resulta que si era automática, sólo tenías que acercarte un poquito más. Puedes \
+                    La puerta se abre sin que tu hagas nada. Resulta que sí era automática, sólo tenías que acercarte un poquito más. Puedes \
                     <a href='escenadialogo'>pasar.</a></p>"
                     );
                 }
@@ -640,7 +638,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "escena4";
+undum.game.start = "start";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
