@@ -3,7 +3,7 @@
 // sets of content: undum.game.situations, undum.game.start,
 // undum.game.qualities, and undum.game.init.
 // ---------------------------------------------------------------------------
-var SUMA = 100 / 17;
+var SUMA = 100 / 16;
 var intentaPasar = false;
 var Escena1Visitada = false;
 var Escena2Visitada = false;
@@ -181,7 +181,7 @@ undum.game.situations = {
                     intentaPasar = true;
                 } else {
                     system.write(
-                        "</br><p class='transient'>Te acercas a la puerta que lleva a la sala principal una vez mas, esta vez con la tarjeta del señor sargento. \
+                        "</br><p class='transient'>Te acercas a la puerta que lleva a la sala principal una vez más, esta vez con la tarjeta del señor sargento. \
                     La puerta se abre sin que tu hagas nada. Resulta que sí era automática, sólo tenías que acercarte un poquito más. Puedes \
                     <a href='escenadialogo'>pasar.</a></p>"
                     );
@@ -380,20 +380,20 @@ undum.game.situations = {
         "<h1>Sala Principal</h1>\<p>Finalmente acabas entrando en la sala principal del complejo. Sientes un cosquilleo que te recorre el cuerpo, un subidón de dopamina, similar a cuando mueves una tarjeta en Trello.</p>\
     \
     </br><p>Observando la habitación encuentras pedestales con bustos de los generalísimos Tenedores al mando durante los últimos 50 años de guerra. \
-    Hechos en mármol de Carraca. Tus conocimientos viendo documentales del canal Historia te hacen cuestionar que tan caros podrían ser esos pedestales.</p>\
+    Hechos en mármol de Carraca. Tus conocimientos viendo documentales del canal Historia te hacen cuestionar qué tan caros podrían ser esos pedestales.</p>\
     <br><center><img src='media/img/escena5.png' width='500' height='auto'></center><br>\
     <p>Frente a ti se sitúan 3 puertas de diferentes tamaños:</p> </br><p>La mas grande está decorada con un rótulo que dice\
     <a href='./salajefe'><i>\"Tridente Dorado, Generalísimo de los Ejércitos Tenedores\"</i></a>, por lo que puedes suponer que es la sala donde se encuentran \
-    los mayores exponentes Tenedores.</p> </br><p>La siguiente puerta posee un rótulo esta vez menos llamativo que dice <a href='escena6'><i>\"Biblioteca\"</i></a>. Por \
+    los mayores exponentes Tenedores.</p> </br><p>La siguiente puerta posee un rótulo, esta vez menos llamativo, que dice <a href='escena6'><i>\"Biblioteca\"</i></a>. Por \
     el nombre supones que es una biblioteca.</p> </br><p>Por último la puerta más pequeña posee un rótulo escrito sobre una tabla de madera \
     sujeta por dos finos clavos que dice <a href='escena7'><i>\"WC\"</i></a>. Tu intelecto estratega te sugiere que es el cuarto de baño.</p>",
         {
             actions: {
                 salajefe: function (character, system, action) {
                     if (character.qualities.traje === false) {
-                        system.write("</br><p>Tienes que buscar traje.</p>")
+                        system.write("</br><p>Decides que es mejor no entrar hasta camuflarte de alguna forma. Quizá puedas encontrar un traje de General Tenedor.</p>")
                     } else {
-                        system.write("<p>Puedes pasar (rellenar texto) a <a href='escena9'> Sala Jefe </a>.</p></br>")
+                        system.write("</br><p>Con tu flagrante nuevo camuflaje, entras en la <a href='escena9'>Sala de los Jefes</a>.</p></br>")
                     }
                 },
             },
@@ -408,13 +408,13 @@ undum.game.situations = {
 
     escena6: new undum.SimpleSituation(
         "<p><h1>Biblioteca</h1>\
-        Decides entrar por la puerta de la biblioteca, y nada mas pasar recibes una bofetada de polvo y olor a libros viejos. \
+        Decides entrar por la puerta de la biblioteca, y nada más pasar recibes una bofetada de polvo y olor a libros viejos. \
             Los tenedores, a pesar de parecer ostentosos y adinerados, no parece que tengan mucho interés por la literatura. \
     Esperas encontrar <i>\"El Cucharoncito\"</i>, un libro que quisiste leer desde pequeño, pero que nunca pudiste por la guerra que atormenta al mundo.</p>\
     \
-    <p>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisaceo.</p>\
+    <p>Mas adelante encuentras varios pasillos con estanterías repletas de libros, te sorprende que todos los tomos tengan la cubierta de un tono grisáceo.</p>\
     <br><center><img src='media/img/escena6.png' width='500' height='auto'></center><br>\
-    <p>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grisáceos. El primer libro es de color <a class='once' href='./verde'>verde esmeralda</a>, \
+    <p>Entre la multitud de libros, encuentras tres brillantes tomos que destacan de entre el mar de libros grises. El primer libro es de color <a class='once' href='./verde'>verde esmeralda</a>, \
     el segundo libro es <a class='once' href='./rojo'>rojo escarlata</a> y el último es <a class='once' href='./azul'>azul cobalto</a>.</p>\
     \
     <p class='transient'>También puedes volver a <a href='escena5'>sala principal</a>.</p>", {
@@ -428,7 +428,7 @@ undum.game.situations = {
                         combinacionCorrecta = true;
 
                         system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
-                      Parece que en algun lugar ha cambiado algo.</p></br>")
+                      Parece que en algún lugar ha cambiado algo.</p></br>")
                     } else {
                         colores = []
                     }
@@ -443,7 +443,7 @@ undum.game.situations = {
                         combinacionCorrecta = true;
 
                         system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
-                      Parece que en algun lugar ha cambiado algo.</p></br>")
+                      Parece que en algún lugar ha cambiado algo.</p></br>")
                     } else {
                         colores = []
                     }
@@ -452,13 +452,13 @@ undum.game.situations = {
             azul: function enter(character, system, action) {
                 colores.push("azul");
 
-                system.write("<p>El libro azul se titula: \"El libro troll\", de Rubius. Veo que son hombres de cultura. Oyes un clic.</p></br>")
+                system.write("<p>El libro azul se titula: \"El libro troll\", de Rubius. Ves que son hombres de cultura. Oyes un clic.</p></br>")
                 if (colores.length === 3) {
                     if (colores[0] === "rojo" && colores[1] === "verde" && colores[2] === "azul") {
                         combinacionCorrecta = true;
 
                         system.write("<p>Oyes a lo lejos un sonido que te recuerda a una cadena de váter. También oyes un ligero \"Noooooooo...\" \
-                      Parece que en algun lugar ha cambiado algo.</p></br>")
+                      Parece que en algún lugar ha cambiado algo.</p></br>")
                     } else {
                         colores = []
                     }
@@ -466,6 +466,8 @@ undum.game.situations = {
             },
         },
         enter: function (character, system, action) {
+            colores = []
+
             if (!Escena6Visitada) {
                 system.setQuality("puntuacion", character.qualities.puntuacion + SUMA);
                 Escena6Visitada = true;
@@ -480,7 +482,7 @@ undum.game.situations = {
     el camino hacia la tienda es algo complicado.</p>\
     <br><center><img src='media/img/escena7.png' width='500' height='auto'></center><br>\
         <p> Cerca de ti ves un lavabo con un espejo. Al ver tu reflejo te llena de orgullo saber que estás a punto de acabar con esta horrible guerra. \
-        También hay 3 de cepillos de dientes de diferentes colores: uno rojo, otro verde y otro azul. Están como nuevos, sin usar. Casi dirías que, si vivieras en una aventura narrativa, serían la\
+        También hay 3 de cepillos de dientes de diferentes colores: uno rojo, otro verde y otro azul. Están como nuevos, sin usar, colocados en fila. Casi dirías que, si vivieras en una aventura narrativa, serían la\
         clave para resolver algún puzzle. Quizá relacionado con libros...</p>\
     </br >\
         <p> También hay tres váteres, aunque te extraña que sólo uno de ellos esté <a class='once' href='./vater'>cubierto</a> para proteger la intimidad.</p>\
@@ -489,7 +491,7 @@ undum.game.situations = {
         actions: {
             vater: function enter(character, system, action) {
                 if (combinacionCorrecta) {
-                    system.write("<p>Entras al habitáculo. Te esperabas un váter, pero sólo hay una puerta en la pared. Está oscuro y te da algo de miedo, pero decides <a href='escena8'>entrar</a>.</p>")
+                    system.write("</br><p>Entras al habitáculo. Te esperabas un váter, pero sólo hay una puerta en la pared. Está oscuro y te da algo de miedo, pero decides <a href='escena8'>entrar</a>.</p>")
                 } else {
                     system.write("</br><p>Está ocupado.</p>");
                 }
@@ -534,7 +536,7 @@ undum.game.situations = {
                     system.write("<p>Jeje, ¡te gané! Esto se me da bien.</p>");
                 } else if (ataqueOtro === 3) {
                     system.write("<p>Tu ataque: <b>Piedra</b> -- Ataque del rival: <b>Tijera</b></p></br>");
-                    system.write("<p>Pero, cómo es posible... He.. ¿He perdido?</p>");
+                    system.write("<p>Pero, cómo es posible... He.. ¿He perdido? Bueno, toma mi traje. Ahora es tuyo.</p>");
                     ganado = true;
                 }
 
@@ -542,7 +544,7 @@ undum.game.situations = {
                     system.write("<p>Selecciona tu ataque: </p></br>\
                         <p>- <a class='once' href='./piedra'>Piedra</a> -</p></br>");
                 } else {
-                    system.write("<p>Ganado. Ahora vuelve a <a href='escena7'>baño</a>.</p></br>");
+                    system.write("</br><p>Has ganado al Piedra, Papel, Tijera Modo Difícil. Todo un reto. Puedes volver al <a href='escena7'>baño</a>.</p></br>");
 
                     if (character.qualities.traje == false) {
                         system.setQuality("traje", true);
@@ -574,7 +576,7 @@ undum.game.situations = {
         <p>La sala del líder es una sala enorme, llena de pequeñas mesas con pocos metros de separación entre sí. Encima de esas mesas hay muchos platos, con una paellera gigante en\
         el centro de cada una, llena de un arroz con pinta deliciosa. Pero lo que más te confunde es ver que alrededor de esas mesas hay decenas de agentes Tenedor mezclados con agentes Cuchara.\
         Todos están comiendo el arroz sin preocupación, charlando y riendo entre ellos. Incluso llegas a ver a algunos Cucharas comiendo con tenedor, y viceversa.<p>\
-        <br><center><img src='media/img/escena7.png' width='500' height='auto'></center><br>\
+        <br><center><img src='media/img/escena9.png' width='500' height='auto'></center><br>\
         <p>Te habían engañado. Os habían engañado a todos. Los altos mandos Tenedores y Cucharas siempre habían estado aliados, incentivando esta guerra entre\
         la gente de a pie por algún motivo. Ahora sólo tienes dos opciones:<p>\
         </br>\
@@ -636,7 +638,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "escena5";
+undum.game.start = "start";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
