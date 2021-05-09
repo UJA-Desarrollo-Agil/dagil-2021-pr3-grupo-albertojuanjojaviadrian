@@ -131,13 +131,13 @@ undum.game.situations = {
         actions: {
             lata: function (character, system, action) {
                 system.write("<p>Las latas de conserva son de la marca \"Chucara\", una famosa marca de comida enlatada producida\
-                        por empresas afiliadas al bando cucharil. ¿cómo habrán llegado aquí?</p></br>");
+                        por empresas afiliadas al bando cucharil. ¿Cómo habrán llegado aquí?</p></br>");
             },
 
             sargento: function (character, system, action) {
                 system.write(
-                    "<p>Mirando mas de cerca al muñeco parece que no es tan... muñeco, pero realmente esta muy buenas condiciones.\
-            Parece que esta conservado en escabeche.</p>"
+                    "<p>Mirando mas de cerca al muñeco parece que no es tan... muñeco, pero realmente está en muy buenas condiciones.\
+            Como conservado en escabeche.</p>"
                 );
 
                 if (intentaPasar === true && character.qualities.tarjeta === false) {
@@ -166,8 +166,8 @@ undum.game.situations = {
     ),
 
     escena4: new undum.SimpleSituation(
-        "<p><h1>Pasillo a Sala Principal</h1>\Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción,\
-    pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, observando con curiosidad las paredes de este.</p>\
+        "<h1>Pasillo a Sala Principal</h1>\<p>Cruzas la puerta y llegas a un pasillo que está aparentemente vacío, con otra puerta al fondo. No entiendes qué sentido tiene esta construcción,\
+    pero seguro que los arquitectos tenían un motivo para hacerlo. Cruzas el pasillo, <a class='once' href='./agujeros'>observando</a> con curiosidad las paredes de este.</p>\
     <br><center><img src='media/img/escena4.png' width='500' height='auto'></center><br>\
     <p class='transient'>Llegas a la puerta de salida y estás seguro de que esta puerta sí lleva a la sala principal.\
     Intentas <a class='once' href='./cruzar'>cruzarla</a>.</p>", {
@@ -189,6 +189,12 @@ undum.game.situations = {
                     );
                 }
             },
+
+            agujeros: function (character, system, action) {
+                system.write("<p></br>Hay unos agujeros casi imperceptibles en las paredes del pasillo. Te acercas para observar a través de ellos.\
+                \nLos agujeros te muestran algo sorprendente, increíble, indescriptible, innominable, que te retuerce las más profundas entrañas del cuerpo y del alma.\
+                 Lo que has visto te turbará durante el resto de tus días y después de ellos, y turbará a tus hijos si los tienes, y a los hijos de tus hijos, pues el terror que has sentido ha quedado impregnado en tus genes.</p></br>");
+            }
         },
         enter: function (character, system, action) {
             if (!Escena4Visitada) {
@@ -552,7 +558,7 @@ undum.game.situations = {
                 }
             },
 
-            tenedon: function(character, system, action){
+            tenedon: function (character, system, action) {
                 system.write("<p>Recuerdas la historia del rapero Don Tenedón. Era un famoso rapero que concienciaba a la gente para que usara el tenedor a la hora de comer arroz, pero un día fue descubierto comiendo con cuchara y toda su fama cayó en picado. Para algunos un héroe, para otros un monstruo...</p>")
             }
         },
@@ -634,7 +640,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "escena8";
+undum.game.start = "escena4";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
