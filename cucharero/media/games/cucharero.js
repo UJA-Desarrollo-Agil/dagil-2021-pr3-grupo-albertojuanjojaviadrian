@@ -16,8 +16,8 @@ var Escena8Visitada = false;
 var Escena9Visitada = false;
 var Escena10Visitada = false;
 var EscenaDialogo = false;
-var EscenaPluma=false;
-var EscenaDedazo=false;
+var EscenaPluma = false;
+var EscenaDedazo = false;
 var combinacionCorrecta = false;
 var colores = [];
 
@@ -260,33 +260,17 @@ undum.game.situations = {
         "<p><h1>Escena pluma de la suerte</h1>\
         Estás en la sala donde se dice que se encuentra la pluma legendaria de la suerte, se dice que se entrega a aquellos que consiguen sacar el número 7 en un dado de 6 caras</p>\
         <p><a href='./lanzamiento' class='once'> Te dispones a tirar el dado esperando a que salga un 7 mágicamente.</a></p>", {
-            actions: {
-                lanzamiento: function(character, system, action) {
+        actions: {
+            lanzamiento: function (character, system, action) {
 
-                    var lanzamiento=system.rnd.randomInt(1, 7)
-                    if (lanzamiento== 7) {
-                        system.write(
-                            "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
+                var lanzamiento = system.rnd.randomInt(1, 7)
+                if (lanzamiento == 7) {
+                    system.write(
+                        "</br><p>Tras lanzar ese dado te das cuenta de que mágicamente ha a parecido un 7, no crees lo que esta pasando, \
                             revisas de nuevo las caras y al volver a la cara del 7 te das cuenta de que ese 7 ha desaparecido y aparece un uno en su lugar</p>. \
                             </br><p>Ves que algo te ha rozado la frente, tras tocartela para ver que es, es una pluma plateada extremadamente brillante, \
                             has encontrado la pluma de la suerte.</p>")
-                        system.setQuality("pluma", true);
-                        system.setQuality(
-                            "puntuacion",
-                            character.qualities.puntuacion + SUMA
-                        );
-                        system.write(
-                            "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
-
-                    }else{
-                            system.write("<p>Miras el dado y ves que ha salido un: " + lanzamiento + "</p>");
-                            system.write("<p>Sabes que puede que nunca sacarás el 7, <a class='once' href='./lanzamiento'> pero te dispones a lanzarlo otra vez</a></p>");
-                    }
-
-                },
-            },
-            enter: function(character, system, action) {
-                if (!EscenaPluma) {
+                    system.setQuality("pluma", true);
                     system.setQuality(
                         "puntuacion",
                         character.qualities.puntuacion + SUMA
@@ -294,21 +278,37 @@ undum.game.situations = {
                     system.write(
                         "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
 
+                } else {
+                    system.write("<p>Miras el dado y ves que ha salido un: " + lanzamiento + "</p>");
+                    system.write("<p>Sabes que puede que nunca sacarás el 7, <a class='once' href='./lanzamiento'> pero te dispones a lanzarlo otra vez</a></p>");
                 }
 
             },
         },
+        enter: function (character, system, action) {
+            if (!EscenaPluma) {
+                system.setQuality(
+                    "puntuacion",
+                    character.qualities.puntuacion + SUMA
+                );
+                system.write(
+                    "<p><a class='once' href='escenadedazo'> <p>Te vas a la sala del jefe ahora que estas totalmente preparado.</a></p>");
+
+            }
+
+        },
+    },
     ),
 
     escenadedazo: new undum.SimpleSituation(
         "<h1>Escena del Jefazo DEDAZO</h1>\
         Estás en la sala donde se encuentra el gran lanzador de dados, comenzará una batalla épica en la que tendrás que vencer</p>\
         <p><a href='./ejemplo2'> <p>Te dispones a lanzar los dados</a></p>",
-        
+
         {
             actions: {
                 ejemplo2: function enter(character, system, action) {
-                    
+
                     var dado1;
                     var dado2;
                     var dado3;
@@ -316,18 +316,18 @@ undum.game.situations = {
                     var sumaDedazo;
 
                     if (!character.qualities.pluma) {
-                        dado1 = system.rnd.randomInt( 1, 3 );
-                        dado2 = system.rnd.randomInt( 1, 3 );
-                        dado3 = system.rnd.randomInt( 1, 3 );
+                        dado1 = system.rnd.randomInt(1, 3);
+                        dado2 = system.rnd.randomInt(1, 3);
+                        dado3 = system.rnd.randomInt(1, 3);
                     } else {
-                        dado1 = system.rnd.randomInt( 4, 6 );
-                        dado2 = system.rnd.randomInt( 4, 6 );
-                        dado3 = system.rnd.randomInt( 4, 6 );
+                        dado1 = system.rnd.randomInt(4, 6);
+                        dado2 = system.rnd.randomInt(4, 6);
+                        dado3 = system.rnd.randomInt(4, 6);
                     }
 
-                    dado1Dedazo = system.rnd.randomInt(4, 6 );
-                    dado2Dedazo = system.rnd.randomInt( 4, 6 );
-                    dado3Dedazo = system.rnd.randomInt( 4, 6 );
+                    dado1Dedazo = system.rnd.randomInt(4, 6);
+                    dado2Dedazo = system.rnd.randomInt(4, 6);
+                    dado3Dedazo = system.rnd.randomInt(4, 6);
 
                     system.write("<center><h3><b>Tus dados</b></h3></center>")
                     system.write("<p>Dado 1: " + dado1 + "</p>")
@@ -346,14 +346,14 @@ undum.game.situations = {
                     system.write("<center><h3><b>Puntuaciones</b></h3></center>")
                     system.write("<p>Tu puntuación es de: " + sumaPersonaje + "</p>")
                     system.write("<p>La puntuación del JEFAZO DEDAZO es de: " + sumaDedazo + "</p>")
-                    
+
                     if (sumaDedazo < sumaPersonaje) {
                         system.write("<h3><b>Bravoooo!!!! HAS GANADO AL JEFAZO DEDAZO</b></h3>")
                         system.write("<p>Una vez que ya has derrotado al jefazo puedes volver a <a  href='escena5'>la sala principal</a></p>")
                     } else {
                         system.write("<p>Has perdido gran F</p>")
                         system.write("<a href='./ejemplo2'> <p>Volver a lanzar</a>")
-                        if(!character.qualities.pluma){
+                        if (!character.qualities.pluma) {
                             system.write("<p><a href='escenapluma'> <p>Buscar pluma</a> </p>")
                         }
                     }
@@ -487,7 +487,7 @@ undum.game.situations = {
         actions: {
             vater: function enter(character, system, action) {
                 if (combinacionCorrecta) {
-                    system.write("<p>Entras al habitáculo. Te esperabas un váter, pero sólo hay una puerta en la pared. Está oscuro y te da algo de cague, pero decides <a href='escena8'>entrar</a>.</p>")
+                    system.write("<p>Entras al habitáculo. Te esperabas un váter, pero sólo hay una puerta en la pared. Está oscuro y te da algo de miedo, pero decides <a href='escena8'>entrar</a>.</p>")
                 } else {
                     system.write("</br><p>Está ocupado.</p>");
                 }
@@ -503,7 +503,7 @@ undum.game.situations = {
     ),
 
     escena8: new undum.SimpleSituation(
-        "<p><h1>Sala secreta</h1>\Entras a la sala secreta. Es una habitación pequeña, llena de pósteres de Don Tenedón\
+        "<h1>Sala secreta</h1>\<p>Entras a la sala secreta. Es una habitación pequeña, llena de pósteres de <a class='once' href='./tenedon'>Don Tenedón</a>\
     y otras celebridades.</p>\
     </br>\
     <p>En una esquina ves a un Tenedor tirado en el suelo, aparentemente muerto. Parece que se quedó\
@@ -550,6 +550,10 @@ undum.game.situations = {
                         );
                     }
                 }
+            },
+
+            tenedon: function(character, system, action){
+                system.write("<p>Recuerdas la historia del rapero Don Tenedón. Era un famoso rapero que concienciaba a la gente para que usara el tenedor a la hora de comer arroz, pero un día fue descubierto comiendo con cuchara y toda su fama cayó en picado. Para algunos un héroe, para otros un monstruo...</p>")
             }
         },
         enter: function (character, system, action) {
@@ -630,7 +634,7 @@ undum.game.situations = {
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "start";
+undum.game.start = "escena8";
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
