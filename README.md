@@ -6,10 +6,11 @@
 
 #### Descripción del juego
 
-*Juego sin Nombre* trata la historia de un chico que despierta en un oscuro mundo que no reconoce. La misión del chico será averiguar dónde está y qué ocurre, tomando responsabilidad de sus propios actos. 
+*Rice Above* trata la historia de un Cuchara que se infiltra en el complejo de los Tenedores para acabar con una guerra mundial.
 
-El juego contendrá elementos humorísticos y decisiones de peso en la historia.
+#### PUEDES JUGAR AL JUEGO AQUÍ:
 
+https://membri-games.itch.io/rice-above
 
 
 #### URL Tablón de Trello
@@ -58,7 +59,7 @@ Ya que estimamos oportuno dejar las HU para el siguiente sprint.
 #### Conclusiones obtenidas en la Sprint Review
 Todas las historias de usuario planificadas para este sprint han sido realizadas correctamente y sin dejar ninguna a medio completar. En este sprint hemos cogido las historias de usuarios que permiten jugar a la primera versión de nuestro juego y probar casi todas las funcionalidades, aunque por ahora hemos obviado algunos detalles: estan todas las situaciones creadas, podemos movernos entre estas...
 
-Sobre el product backlog no ha habido cambios desde el Product Backlog Refinement, sobre las previsiones, se planea en primer lugar acabar las historias de usuario que tienen un valor de infinito y priorizar sobre otras que no aportan tanto valor al proyecto.
+Sobre el Product Backlog no ha habido cambios desde el Product Backlog Refinement, sobre las previsiones, se planea en primer lugar acabar las historias de usuario que tienen un valor de infinito y priorizar sobre otras que no aportan tanto valor al proyecto.
 
 En general, el desarrollo del proyecto ha sido satisfactorio, donde ha habido un buen reparto claro de tareas por lo que todos los miembros del equipo sabían que hacer en cada momento, el problema que tuvimos ha sido la falta de concurrencia entre determinadas tareas ya que teníamos que esperar a que ciertas tareas estuvieran completadas antes del comienzo de las siguientes. Lo hemos solucionado detectando algunas de estas tareas y priorizándolas para evitar esto.
 
@@ -100,8 +101,38 @@ Aunque en general hemos trabajado bien, pensamos en hacer un mejor reparto de ta
 2. **Si una nueva versión del juego (las entregas en cada sprint) incluye nuevas situaciones, estas deben o bien complicar la misión inicial o bien añadir una nueva misión al juego**: el juego obtendrá más escenas, haciendo para el usuario una jugabilidad más extensa y entretenida.
 3. **Se subirá el juego a un sitio web disponible on-line**: se podrá alcanzar a una mayor cantidad de jugadores.
 4. **El jugador podrá usar la acción “mirar detalladamente” (u otra similar) para poder descubrir nuevas cosas en las situaciones que no se le hayan descrito a primera vista**: el juego será más inmersivo al conocer en detalle las escenas.
-5. **Se deberá modificar el CSS del juego original, usando otras fuentes de letra, fondos de pantalla, etc**: mejorará la experencia visual del usuario, aumentando la inmersión del juego.
-6. **Se añadirá música de fondo al juego**: mejorará la experencia auditiva del usuario, aumentando la inmersión del juego .
-7. **Cada situación deberá llevar una imagen descriptiva asociada**: mejorará la experencia visual del usuario, aumentando la inmersión del juego.
+5. **Se deberá modificar el CSS del juego original, usando otras fuentes de letra, fondos de pantalla, etc**: mejorará la experiencia visual del usuario, aumentando la inmersión del juego.
+6. **Se añadirá música de fondo al juego**: mejorará la experiencia auditiva del usuario, aumentando la inmersión en el juego.
+7. **Cada situación deberá llevar una imagen descriptiva asociada**: mejorará la experiencia visual del usuario, aumentando la inmersión del juego.
 
 
+
+#### Tareas escogidas tras el Product Backlog Refinement
+
+Tras el PBR no añadimos ninguna tarea nueva al Sprint Backlog, ya que no las consideramos de suficiente interés en relación esfuerzo/valor.
+
+
+
+#### Conclusiones obtenidas en la Sprint Review
+
+Las historias de usuario que hemos planificado para este sprint han sido correctamente implementadas en el plazo fijado. Este sprint lo hemos centrado en pulir la experiencia de juego, modificando el CSS, añadiendo música y detalles extra al juego. Además, hemos añadido un par de escenas nuevas que alargan la duración del juego y aportan más variedad.
+
+No se han producido cambios en el Product Backlog durante el sprint, incluyendo el tiempo de Product Backlog Refinement. No ha habido problemas durante el desarrollo. En este sprint hemos dividido las tareas de forma más independiente, de forma que cada uno podía trabajar sin depender del trabajo de los demás.
+
+Ya que no habrá más sprints, consideramos finalizado satisfactoriamente el desarrollo del proyecto.
+
+
+
+#### Conclusiones obtenidas en la Sprint Retrospective
+
+El ambiente del sprint anterior se ha mantenido vigente durante este segundo sprint. La comunicación ha sido óptima y no ha existido ningún problema relevante. Las herramientas de trabajo utilizadas han sido las mismas que en el sprint anterior.
+
+En general el trabajo ha estado bien repartido, estando todos de acuerdo en la asignación de cada tarea. Creemos que ha existido una mejora en relación al sprint anterior, sobre todo en cuanto a la interdependencia de las tareas. 
+
+![Demostracion2](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/Demostracion2.png)
+
+
+
+#### Estado del tablon de Trello tras la finalización del Sprint
+
+![SprintFinal2](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/SprintFinal2.png)
