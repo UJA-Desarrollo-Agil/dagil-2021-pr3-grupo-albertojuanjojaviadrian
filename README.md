@@ -6,10 +6,11 @@
 
 #### Descripción del juego
 
-*Juego sin Nombre* trata la historia de un chico que despierta en un oscuro mundo que no reconoce. La misión del chico será averiguar dónde está y qué ocurre, tomando responsabilidad de sus propios actos. 
+*Rice Above* trata la historia de un Cuchara que se infiltra en el complejo de los Tenedores para acabar con una guerra mundial.
 
-El juego contendrá elementos humorísticos y decisiones de peso en la historia.
+#### PUEDES JUGAR AL JUEGO AQUÍ:
 
+https://membri-games.itch.io/rice-above
 
 
 #### URL Tablón de Trello
@@ -142,7 +143,7 @@ En general el trabajo ha estado bien repartido, estando todos de acuerdo en la a
 
 #### Tablas y gráficas
 
-*aquí tabla para los datos del proyecto en su totalidad*
+![TablaInicial](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/tablaInicial.PNG)
 
 
 
