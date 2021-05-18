@@ -149,7 +149,7 @@ En general el trabajo ha estado bien repartido, estando todos de acuerdo en la a
 
 ##### Burndown/Burn-up de los PH
 
-![BDownPH](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/BDownPH.PNG)
+![BDownPH](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/BDownPH.png)
 
 ![BUpPH](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/buPH.PNG)
 
