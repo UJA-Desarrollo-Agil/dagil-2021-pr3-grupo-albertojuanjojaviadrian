@@ -143,6 +143,10 @@ En general el trabajo ha estado bien repartido, estando todos de acuerdo en la a
 
 #### Tablas y gráficas
 
+Enlace al Drive: https://docs.google.com/spreadsheets/d/1g7jv9qkBbiSpiLu3ARhSoI8eZst5CAVCVQqasE6I6x8/edit#gid=0
+
+
+
 ![TablaInicial](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/tablaInicial.PNG)
 
 
