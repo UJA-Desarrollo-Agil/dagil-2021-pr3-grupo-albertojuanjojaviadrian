@@ -135,3 +135,77 @@ En general el trabajo ha estado bien repartido, estando todos de acuerdo en la a
 #### Estado del tablon de Trello tras la finalización del Sprint
 
 ![SprintFinal2](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/SprintFinal2.png)
+
+
+
+## MÉTRICAS
+
+#### Tablas y gráficas
+
+*aquí tabla para los datos del proyecto en su totalidad*
+
+
+
+##### Burndown/Burn-up de los PH
+
+![BDownPH](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/BDownPH.PNG)
+
+![BUpPH](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/buPH.PNG)
+
+
+
+##### Burndown/Burn-up del valor de HU
+
+![BDownPHValor](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/bdValor.PNG)
+
+![BUpPHValor](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/buValor.PNG)
+
+
+
+##### Tabla de velocidades
+
+![TablaVelocidades](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/TablaVelocidades.PNG)
+
+
+
+##### Tablas de cada sprint
+
+![TablaSprint1](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/tablaS1.PNG)
+
+![TablaSprint2](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/tablaS2.PNG)
+
+
+
+##### Gráficas Burndown/Burn-up de Sprint 1
+
+![BdSprint1](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/bdS1.PNG)
+
+![BuSprint1](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/buS1.PNG)
+
+
+
+##### Gráficas Burndown/Burn-up de Sprint 2
+
+![BdSprint2](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/bdS2.PNG)
+
+![BuSprint2](https://github.com/UJA-Desarrollo-Agil/dagil-2021-pr3-grupo-albertojuanjojaviadrian/blob/master/img/buS2.PNG)
+
+
+
+#### Conclusión
+
+##### En cuanto al desarrollo del proyecto
+
+En general el desarrollo del proyecto ha sido satisfactorio. Hemos implementado las características más importantes y algunas opcionales, aunque no hemos sido capaces de implementar todo lo que existía en el Product Backlog (pero no consideramos que esto sea algo negativo, ya que el producto tiene un valor alto aún así).
+
+
+
+##### En cuanto al desarrollo de los sprints
+
+En el Sprint 1, hasta el día 17 vamos trabajando en las distintas tareas, pero no es hasta el día 18 cuando empiezan a terminarse algunas de estas tareas. A partir de ahí las tareas van descendiendo gradualmente hasta que el día 22 se ha completado el sprint entero.
+
+Si observamos el Burnup Sprint 1, podemos ver que antes del día 20 estábamos trabajando por debajo de la línea ideal, pero sin embargo a partir del día 20 estamos por encima de ella. De hecho, conseguimos terminar la iteración 2 días antes del final del sprint. Esto es debido a que los últimos días se iban cerrando la mayoría de tareas en las que habíamos estado trabajando anteriormente.
+
+En cuanto al Sprint 2, el trabaja ha sido más continuo que en el Sprint 1. A partir del día 8 se incrementaron los PH por hacer por el PB Refinement, y a partir del día 12 empiezan a bajar los PH por hacer debido a que ya estábamos completando tareas. 
+
+En este Sprint hemos trabajo siempre por debajo de la línea ideal, y terminamos de completar todas las tareas el día de entrega del Sprint 2, cerrando más tareas los días de antes de entregar.
